@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorImoveis", "GestorImoveis\GestorImoveis.csproj", "{DBC60C5A-671E-420E-A632-BC442D38247C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_GI", "Setup\Setup_GI\Setup_GI.vdproj", "{46FAE7B1-3AD4-4FF2-8D7A-571E1A45974D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBC60C5A-671E-420E-A632-BC442D38247C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC60C5A-671E-420E-A632-BC442D38247C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC60C5A-671E-420E-A632-BC442D38247C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC60C5A-671E-420E-A632-BC442D38247C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46FAE7B1-3AD4-4FF2-8D7A-571E1A45974D}.Debug|Any CPU.ActiveCfg = Debug
+		{46FAE7B1-3AD4-4FF2-8D7A-571E1A45974D}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {743DF35C-3CF4-4F7C-8E82-7CE5F16EE615}
+	EndGlobalSection
+EndGlobal
