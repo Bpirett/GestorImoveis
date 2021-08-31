@@ -98,6 +98,12 @@ namespace GestorImoveis.BLL
             dalContrato.GravarLogContrato(pContrato);
         }
 
+        public int CountContratos()
+        {
+            DalContrato dalContrato = new DalContrato();
+            return dalContrato.CountContratos();
+        }
+
 
     }
 }

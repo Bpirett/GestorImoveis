@@ -34,6 +34,8 @@ namespace GestorImoveis.DAL.Contratos
 
         private const string GI_SP_INCLOGCONTRATOS = "GI_SP_IncCLogProp";
 
+        private const string GI_SP_COUNTCONTRATOS = "GI_SP_CountContratos";
+
         #endregion
 
 
@@ -390,6 +392,14 @@ namespace GestorImoveis.DAL.Contratos
             DbContext db = new DbContext();
             db.ExecutaComandoSQL(GI_SP_INCLOGCONTRATOS, parametros);
 
+        }
+
+        public int CountContratos()
+        {
+            DbContext db = new DbContext();
+            DataSet ds = db.ConsultaSQL(GI_SP_COUNTCONTRATOS, null);
+            DataTable dt = ds.Tables[0];
+            return Convert.ToInt32(dt.Rows[0]["QUANTIDADE"].ToString());
         }
 
     }

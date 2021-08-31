@@ -17,7 +17,7 @@ namespace GestorImoveis.Forms
         {
             InitializeComponent();
             List<string> lista = new List<string>();
-            string[] relatorios = { "Selecionar", "Relatorio de Anuncios", "Relatorio de Clientes", "Relatorio de Contratos" };
+            string[] relatorios = { "Selecionar", "Relatorio de Anuncios", "Relatorio de Clientes", "Relatorio de Contratos", "Extrato de Boletos" };
             cboRelatorio.DataSource = relatorios;
         }
         #endregion
@@ -32,6 +32,7 @@ namespace GestorImoveis.Forms
 
                 ucRelContratos1.Hide();
                 ucRelListaClientes1.Hide();
+                ucRelBoletos1.Hide();
             }
             else if (cboRelatorio.Text == "Relatorio de Clientes")
             {
@@ -40,6 +41,7 @@ namespace GestorImoveis.Forms
 
                 ucListaAnuncio1.Hide();
                 ucRelContratos1.Hide();
+                ucRelBoletos1.Hide();
             }
             else if (cboRelatorio.Text == "Relatorio de Contratos")
             {
@@ -48,12 +50,22 @@ namespace GestorImoveis.Forms
 
                 ucListaAnuncio1.Hide();
                 ucRelListaClientes1.Hide();
+                ucRelBoletos1.Hide();
+            }
+            else if (cboRelatorio.Text == "Extrato de Boletos")
+            {
+                ucRelBoletos1.Show();
+
+                ucListaAnuncio1.Hide();
+                ucRelListaClientes1.Hide();
+                ucRelContratos1.Hide();
             }
             else
             {
                 ucListaAnuncio1.Hide();
                 ucRelListaClientes1.Hide();
                 ucRelContratos1.Hide();
+                ucRelBoletos1.Hide();
             }
         }
 
@@ -62,20 +74,14 @@ namespace GestorImoveis.Forms
 
 
         #region Metodo
-        /// <summary>
-        /// 
-        /// </summary>
-        private void InciarAmbiente()
-        {
-
-        }
-
         #endregion
 
         private void RelatoriosForms_Load(object sender, EventArgs e)
         {
             ucListaAnuncio1.Hide();
             ucRelListaClientes1.Hide();
+            ucRelContratos1.Hide();
+            ucRelBoletos1.Hide();
         }
     }
 }

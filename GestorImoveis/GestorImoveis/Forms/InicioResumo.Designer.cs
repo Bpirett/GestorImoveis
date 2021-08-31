@@ -31,47 +31,48 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioResumo));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblAnuncios = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblLocatarios = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblLocadores = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblClientes = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblReceber = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblContratos = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.TimeResumo = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel10.SuspendLayout();
@@ -80,30 +81,31 @@
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.lblAnuncios);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(608, 32);
+            this.panel3.Location = new System.Drawing.Point(608, 41);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(110, 150);
             this.panel3.TabIndex = 40;
             // 
-            // label11
+            // lblAnuncios
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(42, 118);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 18);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "lbl1";
+            this.lblAnuncios.AutoSize = true;
+            this.lblAnuncios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnuncios.ForeColor = System.Drawing.Color.Black;
+            this.lblAnuncios.Location = new System.Drawing.Point(46, 118);
+            this.lblAnuncios.Name = "lblAnuncios";
+            this.lblAnuncios.Size = new System.Drawing.Size(30, 18);
+            this.lblAnuncios.TabIndex = 16;
+            this.lblAnuncios.Text = "lbl1";
             // 
             // label12
             // 
@@ -139,26 +141,26 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.lblLocatarios);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Location = new System.Drawing.Point(179, 29);
+            this.panel1.Location = new System.Drawing.Point(179, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(110, 150);
             this.panel1.TabIndex = 39;
             // 
-            // label5
+            // lblLocatarios
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(36, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 18);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "lbl1";
+            this.lblLocatarios.AutoSize = true;
+            this.lblLocatarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocatarios.ForeColor = System.Drawing.Color.Black;
+            this.lblLocatarios.Location = new System.Drawing.Point(45, 121);
+            this.lblLocatarios.Name = "lblLocatarios";
+            this.lblLocatarios.Size = new System.Drawing.Size(30, 18);
+            this.lblLocatarios.TabIndex = 16;
+            this.lblLocatarios.Text = "lbl1";
             // 
             // label6
             // 
@@ -205,25 +207,25 @@
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.label7);
-            this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.pictureBox6);
+            this.panel11.Controls.Add(this.lblLocadores);
+            this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.panel12);
-            this.panel11.Location = new System.Drawing.Point(324, 30);
+            this.panel11.Location = new System.Drawing.Point(324, 39);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(110, 150);
             this.panel11.TabIndex = 44;
             // 
-            // label7
+            // lblLocadores
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Crimson;
-            this.label7.Location = new System.Drawing.Point(36, 120);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 18);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "lbl1";
+            this.lblLocadores.AutoSize = true;
+            this.lblLocadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocadores.ForeColor = System.Drawing.Color.Black;
+            this.lblLocadores.Location = new System.Drawing.Point(44, 120);
+            this.lblLocadores.Name = "lblLocadores";
+            this.lblLocadores.Size = new System.Drawing.Size(30, 18);
+            this.lblLocadores.TabIndex = 16;
+            this.lblLocadores.Text = "lbl1";
             // 
             // label8
             // 
@@ -237,16 +239,6 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Locadores";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(14, 34);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -259,24 +251,24 @@
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.label2);
+            this.panel9.Controls.Add(this.lblClientes);
             this.panel9.Controls.Add(this.pictureBox1);
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(35, 28);
+            this.panel9.Location = new System.Drawing.Point(35, 37);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(110, 150);
             this.panel9.TabIndex = 45;
             // 
-            // label2
+            // lblClientes
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(24, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "lbl1";
+            this.lblClientes.AutoSize = true;
+            this.lblClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.ForeColor = System.Drawing.Color.Black;
+            this.lblClientes.Location = new System.Drawing.Point(40, 122);
+            this.lblClientes.Name = "lblClientes";
+            this.lblClientes.Size = new System.Drawing.Size(30, 18);
+            this.lblClientes.TabIndex = 1;
+            this.lblClientes.Text = "lbl1";
             // 
             // pictureBox1
             // 
@@ -336,24 +328,24 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.lblReceber);
             this.panel7.Controls.Add(this.pictureBox5);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(747, 33);
+            this.panel7.Location = new System.Drawing.Point(747, 42);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(110, 150);
             this.panel7.TabIndex = 42;
             // 
-            // label13
+            // lblReceber
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label13.Location = new System.Drawing.Point(37, 117);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 18);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "lbl1";
+            this.lblReceber.AutoSize = true;
+            this.lblReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceber.ForeColor = System.Drawing.Color.Black;
+            this.lblReceber.Location = new System.Drawing.Point(43, 117);
+            this.lblReceber.Name = "lblReceber";
+            this.lblReceber.Size = new System.Drawing.Size(30, 18);
+            this.lblReceber.TabIndex = 16;
+            this.lblReceber.Text = "lbl1";
             // 
             // pictureBox5
             // 
@@ -390,25 +382,25 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.lblContratos);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(467, 31);
+            this.panel5.Location = new System.Drawing.Point(467, 40);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(110, 150);
             this.panel5.TabIndex = 41;
             // 
-            // label9
+            // lblContratos
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(34, 119);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 18);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "lbl1";
+            this.lblContratos.AutoSize = true;
+            this.lblContratos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContratos.ForeColor = System.Drawing.Color.Black;
+            this.lblContratos.Location = new System.Drawing.Point(42, 119);
+            this.lblContratos.Name = "lblContratos";
+            this.lblContratos.Size = new System.Drawing.Size(30, 18);
+            this.lblContratos.TabIndex = 16;
+            this.lblContratos.Text = "lbl1";
             // 
             // label10
             // 
@@ -447,7 +439,7 @@
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblFecha.Location = new System.Drawing.Point(310, 373);
+            this.lblFecha.Location = new System.Drawing.Point(348, 378);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(490, 39);
             this.lblFecha.TabIndex = 48;
@@ -459,7 +451,7 @@
             this.lblhora.BackColor = System.Drawing.Color.Transparent;
             this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblhora.Location = new System.Drawing.Point(330, 253);
+            this.lblhora.Location = new System.Drawing.Point(368, 258);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(470, 120);
             this.lblhora.TabIndex = 47;
@@ -470,12 +462,38 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // TimeResumo
+            // 
+            this.TimeResumo.Enabled = true;
+            this.TimeResumo.Interval = 300000;
+            this.TimeResumo.Tick += new System.EventHandler(this.TimeResumo_Tick);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(14, 34);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 17;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Boletos a vencer:";
+            // 
             // InicioResumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(892, 499);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblhora);
             this.Controls.Add(this.panel3);
@@ -496,7 +514,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -510,6 +527,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,40 +536,42 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblAnuncios;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblLocatarios;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblLocadores;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblReceber;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblContratos;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer TimeResumo;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -54,7 +54,7 @@ namespace GestorImoveis.BLL
             return dalBoleto.ObterBoleto(pCodContrato,pCodBoleto,pNumBoleto);
         }
 
-        public List<Boleto> ObterBoletoRel(string pCodContrato, string pCodBoleto, string pNumBoleto)
+        public Boleto ObterBoletoRel(string pCodContrato, string pCodBoleto, string pNumBoleto)
         {
             DalBoleto dalBoleto = new DalBoleto();
             return dalBoleto.ObterBoletoRel(pCodContrato, pCodBoleto, pNumBoleto);

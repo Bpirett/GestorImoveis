@@ -87,7 +87,6 @@ namespace GestorImoveis.BLL
 
         #endregion
 
-
         #region Metodos
 
 

@@ -16,7 +16,7 @@ namespace GestorImoveis.BLL
     public class BoRelatorio
     {
         /// <summary>
-        /// BoletoModelo.docx
+        /// Emissão de boletos
         /// </summary>
         public void EmitirBoleto(string pCodContrato, string pCodBoleto, string pNumBoleto)
         {
@@ -24,18 +24,19 @@ namespace GestorImoveis.BLL
             WordDocument document = new WordDocument(docStream, FormatType.Docx);
             docStream.Dispose();
 
-            string[] fieldNames = { "RefBoleto", "VlrAluguel", "VlrIptu", "VlrDesc", "VlrMulta", "VlrOutros", "VlrTotal", "VlrAdmin", "Locatario", "Locador", "TipoImovel", "EnderecoImovel", "DataIni", "DataFim", "DataVencimentor", "DataAtual", "NumParcela" };
+            string[] fieldNames = { "RefBoleto", "VlrAluguel", "VlrIptu", "VlrDesc", "VlrMulta", "VlrOutros", "VlrTotal", "VlrAdmin", "Locatario", "Locador", "TipoImovel", "EnderecoImovel", "DataIni", "DataFim", "DataVencimentor", "DataAtual", "NumParcela", "VlrTotalLocat" };
 
             BoBoletos boBoletos = new BoBoletos();
-            var table = boBoletos.ObterBoletoRel(pCodContrato, pCodBoleto, pNumBoleto);
+            Boleto boleto = boBoletos.ObterBoletoRel(pCodContrato, pCodBoleto, pNumBoleto);
 
-            string[] fieldValues = { table[0].Codigo.ToString(), table[0].Valor.ToString("C2"), table[0].VlrIptu.ToString("C2"), table[0].VlrDesconto.ToString("C2"), table[0].VlrMulta.ToString("C2"), "0,00", table[0].Valor.ToString("C2"), table[0].VlrComissao.ToString("C2"),
-            table[0].Locatario,table[0].Locador ,table[0].TipoImovel, table[0].Endereco, UtilHelpers.ConverteData(table[0].PeriodoInicio), UtilHelpers.ConverteData(table[0].PeriodoFim), UtilHelpers.ConverteData(table[0].DataVencimento), DateTime.Now.ToLongDateString(), table[0].NumBoleto.ToString() };
+
+            string[] fieldValues = { boleto.Codigo.ToString(), boleto.Valor.ToString("C2"), boleto.VlrIptu.ToString("C2"), boleto.VlrDesconto.ToString("C2"), boleto.VlrMulta.ToString("C2"), "0,00", CalcularValor(boleto,false).ToString(), boleto.VlrComissao.ToString("C2"),
+            boleto.Locatario,boleto.Locador ,boleto.TipoImovel, boleto.Endereco, UtilHelpers.ConverteData(boleto.PeriodoInicio), UtilHelpers.ConverteData(boleto.PeriodoFim), UtilHelpers.ConverteData(boleto.DataVencimento), DateTime.Now.ToLongDateString(), boleto.NumBoleto.ToString(), CalcularValor(boleto,true).ToString() };
             //Performs the mail merge
             document.MailMerge.Execute(fieldNames, fieldValues);
 
             //Saves the Word document as DOCX format
-            docStream = File.Create(Path.GetFullPath(string.Format(BoParametro.R_DIRDOWND + @"\Boleto_{0}_{1}.Docx", table[0].Codigo, table[0].NumBoleto)));
+            docStream = File.Create(Path.GetFullPath(string.Format(BoParametro.R_DIRDOWND + @"\Boleto_{0}_Parc_{1}.Docx", boleto.CodContrato, boleto.NumBoleto)));
             document.Save(docStream, FormatType.Docx);
             document.Close();
             docStream.Dispose();
@@ -75,11 +76,35 @@ namespace GestorImoveis.BLL
             DataTable dt = dalRelatorio.RelContratos(pValor);
 
             pReport.DataSource = new ReportDataSource("DataSetRelContratos", dt);
-            pReport.PathReport = @"F:\Repositorio\Estudo\ControleImovel-2020\GestorImoveis\GestorImoveis\Reports\RelContratos\Template\RelContratos.rdlc";
+            pReport.PathReport = @"F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Reports\RelContratos\Template\RelContratos.rdlc";
 
             return pReport;
         }
 
+
+        public Relatorio RelBoletos(Relatorio pReport, string pValor)
+        {
+            DalRelatorio dalRelatorio = new DalRelatorio();
+
+            DataTable dt = dalRelatorio.RelBoletos(pValor);
+
+            pReport.DataSource = new ReportDataSource("DataSetRelBoletos", dt);
+            pReport.PathReport = @"F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Reports\RelBoletos\Template\RelBoletos.rdlc";
+
+            return pReport;
+        }
+
+        public double CalcularValor(Boleto boleto, bool pTipo)
+        {
+            double VlrTotal = 0.00;
+
+            if (pTipo == true)
+                VlrTotal = boleto.Valor + boleto.VlrIptu + boleto.VlrMulta - boleto.VlrDesconto;
+            else
+               VlrTotal = boleto.Valor + boleto.VlrIptu + boleto.VlrMulta - boleto.VlrDesconto - boleto.VlrComissao;
+
+            return VlrTotal;
+        }
 
     }
 }

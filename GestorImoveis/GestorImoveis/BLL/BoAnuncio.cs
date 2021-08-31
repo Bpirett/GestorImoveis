@@ -82,6 +82,12 @@ namespace GestorImoveis.BLL
             return MontarCodigo;
         }
 
+        public int CountAnuncios()
+        {
+            DalAnuncio dalAnuncio = new DalAnuncio();
+            return dalAnuncio.CountAnuncios();
+        }
+
 
     }
 }

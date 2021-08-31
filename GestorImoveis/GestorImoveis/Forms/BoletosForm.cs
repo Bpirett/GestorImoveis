@@ -45,7 +45,6 @@ namespace GestorImoveis.Forms
             BoBoletos boBoletos = new BoBoletos();
             gridBoletos.DataSource = boBoletos.ConsultaBoleto(cboContratos.Text);
             MontarGrid();
-
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -213,6 +212,7 @@ namespace GestorImoveis.Forms
 
         #endregion
 
+        #region Metodos
         /// <summary>
         /// 
         /// </summary>
@@ -470,12 +470,6 @@ namespace GestorImoveis.Forms
             txt.Leave += UtilHelpers.RetornarMascaraMoeda;
             txt.KeyPress += UtilHelpers.ApenasValorNumerico;
         }
-
-
-
-
-
-        #region Metodos
 
         #endregion
 

@@ -33,6 +33,8 @@ namespace GestorImoveis.DAL.Anuncio
 
         private const string GI_SP_PESQANUNCIO = "GI_SP_PesqAnuncio";
 
+        private const string GI_SP_COUNTANUNCIOS = "GI_SP_CountAnuncios";
+
         #endregion
 
         public string ObterUltCodAnuncios(string pNeg)
@@ -362,6 +364,14 @@ namespace GestorImoveis.DAL.Anuncio
             }
 
             return lstanuncio;
+        }
+
+        public int CountAnuncios()
+        {
+            DbContext db = new DbContext();
+            DataSet ds = db.ConsultaSQL(GI_SP_COUNTANUNCIOS, null);
+            DataTable dt = ds.Tables[0];
+            return Convert.ToInt32(dt.Rows[0]["QUANTIDADE"].ToString());
         }
 
 

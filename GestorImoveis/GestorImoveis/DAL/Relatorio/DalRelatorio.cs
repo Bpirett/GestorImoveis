@@ -16,6 +16,7 @@ namespace GestorImoveis.DAL.Relatorio
         private const string GI_SP_RELLISTAANUNCIO = "GI_SP_RelListaAnuncio";
         private const string GI_SP_RELLISTACLIENTE = "GI_SP_RelListaClientes";
         private const string GI_SP_RELCONTRATOS = "GI_SP_RelContratos";
+        private const string GI_SP_RELBOLETOS = "GI_SP_RelBoletos";
 
         #endregion
 
@@ -57,6 +58,18 @@ namespace GestorImoveis.DAL.Relatorio
             DataTable dataTable = ds.Tables[0];
 
             dataTable.Rows[0]["SITCONTR"] = ConverterSitcontrato(dataTable.Rows[0]["SITCONTR"].ToString());
+
+            return dataTable;
+        }
+
+        public DataTable RelBoletos(string pValor)
+        {
+            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@CODCONTRATO", pValor));
+
+            DbContext db = new DbContext();
+            DataSet ds = db.ConsultaSQL(GI_SP_RELBOLETOS, parametros);
+            DataTable dataTable = ds.Tables[0];
 
             return dataTable;
         }

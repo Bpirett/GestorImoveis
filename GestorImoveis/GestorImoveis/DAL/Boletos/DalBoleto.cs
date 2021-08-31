@@ -229,7 +229,7 @@ namespace GestorImoveis.DAL.Boletos
             return lstboletos;
         }
 
-        public List<Boleto> ObterBoletoRel(string pCodContrato, string pCodBoleto, string pNumBoleto)
+        public Boleto ObterBoletoRel(string pCodContrato, string pCodBoleto, string pNumBoleto)
         {
             List<Boleto> lstboletos = new List<Boleto>();
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
@@ -239,17 +239,17 @@ namespace GestorImoveis.DAL.Boletos
 
             DbContext db = new DbContext();
             DataSet ds = db.ConsultaSQL(GI_SP_OBTERBOLETOREL, parametros);
-
+            Boleto boleto = new Boleto();
 
             if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
-
+                
                 DataTable dt = ds.Tables[0];
-
+           
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    Boleto boleto = new Boleto();
 
+               
                     if (dt.Rows[i]["CODBOL"] != DBNull.Value)
                         boleto.Codigo = Convert.ToString(dt.Rows[i]["CODBOL"]);
 
@@ -311,10 +311,11 @@ namespace GestorImoveis.DAL.Boletos
                         boleto.PeriodoFim = Convert.ToDateTime(dt.Rows[i]["DTFIMBOL"]).Date;
 
 
-                    lstboletos.Add(boleto);
+                    
                 }
             }
-            return lstboletos;
+
+            return boleto;
         }
 
         public void AlterarBoleto(Boleto pBoleto)

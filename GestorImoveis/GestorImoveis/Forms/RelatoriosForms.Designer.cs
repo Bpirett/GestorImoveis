@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.cboRelatorio = new System.Windows.Forms.ComboBox();
-            this.ucRelListaClientes1 = new GestorImoveis.UcRelListaClientes();
-            this.ucListaAnuncio1 = new GestorImoveis.UcListaAnuncio();
+            this.ucRelBoletos1 = new GestorImoveis.UcRelBoletos();
             this.ucRelContratos1 = new GestorImoveis.UcRelContratos();
+            this.ucListaAnuncio1 = new GestorImoveis.UcListaAnuncio();
+            this.ucRelListaClientes1 = new GestorImoveis.UcRelListaClientes();
             this.SuspendLayout();
             // 
             // cboRelatorio
@@ -44,19 +45,12 @@
             this.cboRelatorio.TabIndex = 0;
             this.cboRelatorio.SelectedIndexChanged += new System.EventHandler(this.cboRelatorio_SelectedIndexChanged);
             // 
-            // ucRelListaClientes1
+            // ucRelBoletos1
             // 
-            this.ucRelListaClientes1.Location = new System.Drawing.Point(2, 56);
-            this.ucRelListaClientes1.Name = "ucRelListaClientes1";
-            this.ucRelListaClientes1.Size = new System.Drawing.Size(889, 444);
-            this.ucRelListaClientes1.TabIndex = 1;
-            // 
-            // ucListaAnuncio1
-            // 
-            this.ucListaAnuncio1.Location = new System.Drawing.Point(2, 56);
-            this.ucListaAnuncio1.Name = "ucListaAnuncio1";
-            this.ucListaAnuncio1.Size = new System.Drawing.Size(889, 400);
-            this.ucListaAnuncio1.TabIndex = 0;
+            this.ucRelBoletos1.Location = new System.Drawing.Point(2, 69);
+            this.ucRelBoletos1.Name = "ucRelBoletos1";
+            this.ucRelBoletos1.Size = new System.Drawing.Size(889, 400);
+            this.ucRelBoletos1.TabIndex = 3;
             // 
             // ucRelContratos1
             // 
@@ -65,12 +59,27 @@
             this.ucRelContratos1.Size = new System.Drawing.Size(889, 400);
             this.ucRelContratos1.TabIndex = 2;
             // 
+            // ucListaAnuncio1
+            // 
+            this.ucListaAnuncio1.Location = new System.Drawing.Point(2, 56);
+            this.ucListaAnuncio1.Name = "ucListaAnuncio1";
+            this.ucListaAnuncio1.Size = new System.Drawing.Size(889, 400);
+            this.ucListaAnuncio1.TabIndex = 0;
+            // 
+            // ucRelListaClientes1
+            // 
+            this.ucRelListaClientes1.Location = new System.Drawing.Point(2, 56);
+            this.ucRelListaClientes1.Name = "ucRelListaClientes1";
+            this.ucRelListaClientes1.Size = new System.Drawing.Size(889, 444);
+            this.ucRelListaClientes1.TabIndex = 1;
+            // 
             // RelatoriosForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(892, 499);
+            this.Controls.Add(this.ucRelBoletos1);
             this.Controls.Add(this.ucRelContratos1);
             this.Controls.Add(this.ucListaAnuncio1);
             this.Controls.Add(this.cboRelatorio);
@@ -89,5 +98,6 @@
         private UcListaAnuncio ucListaAnuncio1;
         private UcRelListaClientes ucRelListaClientes1;
         private UcRelContratos ucRelContratos1;
+        private UcRelBoletos ucRelBoletos1;
     }
 }

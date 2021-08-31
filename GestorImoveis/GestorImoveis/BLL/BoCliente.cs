@@ -82,6 +82,24 @@ namespace GestorImoveis.BLL
             dalCliente.GravarLogCliente(pCliente);
         }
 
+        public int CountClientes()
+        {
+            DalCliente dalCliente = new DalCliente();
+            return dalCliente.CountClientes();
+        }
+
+        public int CountLocatarios()
+        {
+            DalCliente dalCliente = new DalCliente();
+            return dalCliente.CountLocatarios();
+        }
+
+        public int CountLocadores()
+        {
+            DalCliente dalCliente = new DalCliente();
+            return dalCliente.CountLocadores();
+        }
+
 
     }
 }

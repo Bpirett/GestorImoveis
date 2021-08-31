@@ -30,6 +30,14 @@ namespace GestorImoveis.DAL.Clientes
 
         private const string GI_SP_INCLOGCLI = "GI_SP_IncCLogCliente";
 
+        private const string GI_SP_COUNTCLIENTES = "GI_SP_CountClientes";
+
+        private const string GI_SP_COUNTLOCADORES = "GI_SP_CountLocadores";
+
+        private const string GI_SP_COUNTLOCATARIOS = "GI_SP_CountLocatarios";
+
+
+
         #endregion
         public string ObterUltCodCli()
         {
@@ -335,6 +343,30 @@ namespace GestorImoveis.DAL.Clientes
 
 
             db.ExecutaComandoSQL(GI_SP_INCLOGCLI, parametros);
+        }
+
+        public int CountClientes()
+        {
+            DbContext db = new DbContext();
+            DataSet ds = db.ConsultaSQL(GI_SP_COUNTCLIENTES, null);
+            DataTable dt = ds.Tables[0];
+            return Convert.ToInt32(dt.Rows[0]["QUANTIDADE"].ToString());
+        }
+
+        public int CountLocatarios()
+        {
+            DbContext db = new DbContext();
+            DataSet ds = db.ConsultaSQL(GI_SP_COUNTLOCATARIOS, null);
+            DataTable dt = ds.Tables[0];
+            return Convert.ToInt32(dt.Rows[0]["QUANTIDADE"].ToString());
+        }
+
+        public int CountLocadores()
+        {
+            DbContext db = new DbContext();
+            DataSet ds = db.ConsultaSQL(GI_SP_COUNTLOCADORES, null);
+            DataTable dt = ds.Tables[0];
+            return Convert.ToInt32(dt.Rows[0]["QUANTIDADE"].ToString());
         }
 
     }
