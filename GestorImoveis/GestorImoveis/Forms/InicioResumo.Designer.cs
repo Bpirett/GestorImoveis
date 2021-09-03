@@ -42,6 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lblLocadores = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -62,17 +63,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblhora = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TimeResumo = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.lblReceberAdm = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel10.SuspendLayout();
@@ -81,17 +85,20 @@
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lblAnuncios);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(608, 41);
+            this.panel3.Location = new System.Drawing.Point(520, 41);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(110, 150);
             this.panel3.TabIndex = 40;
@@ -99,11 +106,11 @@
             // lblAnuncios
             // 
             this.lblAnuncios.AutoSize = true;
-            this.lblAnuncios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnuncios.ForeColor = System.Drawing.Color.Black;
-            this.lblAnuncios.Location = new System.Drawing.Point(46, 118);
+            this.lblAnuncios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnuncios.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblAnuncios.Location = new System.Drawing.Point(42, 109);
             this.lblAnuncios.Name = "lblAnuncios";
-            this.lblAnuncios.Size = new System.Drawing.Size(30, 18);
+            this.lblAnuncios.Size = new System.Drawing.Size(46, 25);
             this.lblAnuncios.TabIndex = 16;
             this.lblAnuncios.Text = "lbl1";
             // 
@@ -124,7 +131,7 @@
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(14, 34);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox4.Size = new System.Drawing.Size(80, 67);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
@@ -140,13 +147,14 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblLocatarios);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Location = new System.Drawing.Point(179, 38);
+            this.panel1.Location = new System.Drawing.Point(140, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(110, 150);
             this.panel1.TabIndex = 39;
@@ -154,11 +162,11 @@
             // lblLocatarios
             // 
             this.lblLocatarios.AutoSize = true;
-            this.lblLocatarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocatarios.ForeColor = System.Drawing.Color.Black;
-            this.lblLocatarios.Location = new System.Drawing.Point(45, 121);
+            this.lblLocatarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocatarios.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblLocatarios.Location = new System.Drawing.Point(42, 112);
             this.lblLocatarios.Name = "lblLocatarios";
-            this.lblLocatarios.Size = new System.Drawing.Size(30, 18);
+            this.lblLocatarios.Size = new System.Drawing.Size(46, 25);
             this.lblLocatarios.TabIndex = 16;
             this.lblLocatarios.Text = "lbl1";
             // 
@@ -168,7 +176,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(10, 4);
+            this.label6.Location = new System.Drawing.Point(15, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 18);
             this.label6.TabIndex = 15;
@@ -179,7 +187,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(15, 34);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.Size = new System.Drawing.Size(80, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -195,6 +203,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -206,24 +215,35 @@
             // 
             // panel11
             // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.pictureBox6);
             this.panel11.Controls.Add(this.lblLocadores);
             this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.panel12);
-            this.panel11.Location = new System.Drawing.Point(324, 39);
+            this.panel11.Location = new System.Drawing.Point(267, 39);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(110, 150);
             this.panel11.TabIndex = 44;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(14, 34);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(80, 69);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 17;
+            this.pictureBox6.TabStop = false;
+            // 
             // lblLocadores
             // 
             this.lblLocadores.AutoSize = true;
-            this.lblLocadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocadores.ForeColor = System.Drawing.Color.Black;
-            this.lblLocadores.Location = new System.Drawing.Point(44, 120);
+            this.lblLocadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocadores.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblLocadores.Location = new System.Drawing.Point(40, 111);
             this.lblLocadores.Name = "lblLocadores";
-            this.lblLocadores.Size = new System.Drawing.Size(30, 18);
+            this.lblLocadores.Size = new System.Drawing.Size(46, 25);
             this.lblLocadores.TabIndex = 16;
             this.lblLocadores.Text = "lbl1";
             // 
@@ -233,7 +253,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(4, 2);
+            this.label8.Location = new System.Drawing.Point(13, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 18);
             this.label8.TabIndex = 15;
@@ -250,11 +270,12 @@
             // 
             // panel9
             // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.lblClientes);
             this.panel9.Controls.Add(this.pictureBox1);
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(35, 37);
+            this.panel9.Location = new System.Drawing.Point(14, 37);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(110, 150);
             this.panel9.TabIndex = 45;
@@ -262,11 +283,11 @@
             // lblClientes
             // 
             this.lblClientes.AutoSize = true;
-            this.lblClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.ForeColor = System.Drawing.Color.Black;
-            this.lblClientes.Location = new System.Drawing.Point(40, 122);
+            this.lblClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblClientes.Location = new System.Drawing.Point(38, 113);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(30, 18);
+            this.lblClientes.Size = new System.Drawing.Size(46, 25);
             this.lblClientes.TabIndex = 1;
             this.lblClientes.Text = "lbl1";
             // 
@@ -275,7 +296,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(13, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -327,11 +348,12 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.lblReceber);
             this.panel7.Controls.Add(this.pictureBox5);
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(747, 42);
+            this.panel7.Location = new System.Drawing.Point(646, 42);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(110, 150);
             this.panel7.TabIndex = 42;
@@ -340,8 +362,8 @@
             // 
             this.lblReceber.AutoSize = true;
             this.lblReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceber.ForeColor = System.Drawing.Color.Black;
-            this.lblReceber.Location = new System.Drawing.Point(43, 117);
+            this.lblReceber.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblReceber.Location = new System.Drawing.Point(6, 115);
             this.lblReceber.Name = "lblReceber";
             this.lblReceber.Size = new System.Drawing.Size(30, 18);
             this.lblReceber.TabIndex = 16;
@@ -352,7 +374,7 @@
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(14, 34);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox5.Size = new System.Drawing.Size(80, 66);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
@@ -381,12 +403,13 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblContratos);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(467, 40);
+            this.panel5.Location = new System.Drawing.Point(394, 40);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(110, 150);
             this.panel5.TabIndex = 41;
@@ -394,11 +417,11 @@
             // lblContratos
             // 
             this.lblContratos.AutoSize = true;
-            this.lblContratos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContratos.ForeColor = System.Drawing.Color.Black;
-            this.lblContratos.Location = new System.Drawing.Point(42, 119);
+            this.lblContratos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContratos.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblContratos.Location = new System.Drawing.Point(41, 110);
             this.lblContratos.Name = "lblContratos";
-            this.lblContratos.Size = new System.Drawing.Size(30, 18);
+            this.lblContratos.Size = new System.Drawing.Size(46, 25);
             this.lblContratos.TabIndex = 16;
             this.lblContratos.Text = "lbl1";
             // 
@@ -419,7 +442,7 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(14, 34);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox3.Size = new System.Drawing.Size(80, 68);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -433,59 +456,83 @@
             this.panel6.Size = new System.Drawing.Size(108, 30);
             this.panel6.TabIndex = 0;
             // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblFecha.Location = new System.Drawing.Point(348, 378);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(490, 39);
-            this.lblFecha.TabIndex = 48;
-            this.lblFecha.Text = "Miercoles, 10  noviembre  2017";
-            // 
-            // lblhora
-            // 
-            this.lblhora.AutoSize = true;
-            this.lblhora.BackColor = System.Drawing.Color.Transparent;
-            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblhora.Location = new System.Drawing.Point(368, 258);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(470, 120);
-            this.lblhora.TabIndex = 47;
-            this.lblhora.Text = "10:59:58";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // TimeResumo
             // 
             this.TimeResumo.Enabled = true;
             this.TimeResumo.Interval = 300000;
             this.TimeResumo.Tick += new System.EventHandler(this.TimeResumo_Tick);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(14, 34);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 17;
-            this.pictureBox6.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 276);
+            this.label2.Location = new System.Drawing.Point(11, 239);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 49;
-            this.label2.Text = "Boletos a vencer:";
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.lblReceberAdm);
+            this.panel13.Controls.Add(this.pictureBox7);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Location = new System.Drawing.Point(773, 42);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(110, 150);
+            this.panel13.TabIndex = 50;
+            // 
+            // lblReceberAdm
+            // 
+            this.lblReceberAdm.AutoSize = true;
+            this.lblReceberAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceberAdm.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblReceberAdm.Location = new System.Drawing.Point(6, 115);
+            this.lblReceberAdm.Name = "lblReceberAdm";
+            this.lblReceberAdm.Size = new System.Drawing.Size(30, 18);
+            this.lblReceberAdm.TabIndex = 16;
+            this.lblReceberAdm.Text = "lbl1";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(14, 34);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(80, 66);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel14.Controls.Add(this.label7);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(108, 30);
+            this.panel14.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 18);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Receber Adm:";
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cartesianChart1.Location = new System.Drawing.Point(14, 222);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(474, 242);
+            this.cartesianChart1.TabIndex = 51;
+            this.cartesianChart1.Text = "cartesianChart1";
             // 
             // InicioResumo
             // 
@@ -493,9 +540,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(892, 499);
+            this.Controls.Add(this.cartesianChart1);
+            this.Controls.Add(this.panel13);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.lblhora);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label15);
@@ -514,6 +561,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -527,7 +575,11 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,11 +619,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblhora;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer TimeResumo;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label lblReceberAdm;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label7;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }

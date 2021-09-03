@@ -30,6 +30,10 @@ namespace GestorImoveis.DAL.Boletos
 
         private const string GI_SP_OBTERBOLETOREL = "GI_SP_ObterBoletoRel";
 
+        private const string GI_SP_CONSULVALORRECEBER = "GI_SP_ConsultValorReceberMes";
+
+        private const string GI_SP_CONSULVALORADMRECEBER = "GI_SP_ConsultValorAdmReceberMes";
+
         #endregion
 
 
@@ -143,7 +147,7 @@ namespace GestorImoveis.DAL.Boletos
                     if (dt.Rows[i]["PAGBOL"] != DBNull.Value)
                         boleto.PagBoleto = boleto.ConverterPagBoleto(Convert.ToString(dt.Rows[i]["PAGBOL"]));
 
-               
+
 
                     lstboletos.Add(boleto);
                 }
@@ -243,13 +247,13 @@ namespace GestorImoveis.DAL.Boletos
 
             if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
-                
+
                 DataTable dt = ds.Tables[0];
-           
+
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
 
-               
+
                     if (dt.Rows[i]["CODBOL"] != DBNull.Value)
                         boleto.Codigo = Convert.ToString(dt.Rows[i]["CODBOL"]);
 
@@ -311,7 +315,7 @@ namespace GestorImoveis.DAL.Boletos
                         boleto.PeriodoFim = Convert.ToDateTime(dt.Rows[i]["DTFIMBOL"]).Date;
 
 
-                    
+
                 }
             }
 
@@ -374,5 +378,62 @@ namespace GestorImoveis.DAL.Boletos
 
             return false;
         }
+
+
+
+        public double ConsultarValorReceberMes()
+        {
+            DbContext db = new DbContext();
+
+            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@DTNOW", DateTime.Now.Date));
+            DataSet ds = db.ConsultaSQL(GI_SP_CONSULVALORRECEBER, parametros);
+            double ValorReceber = 0.00;
+
+            if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                DataTable dt = ds.Tables[0];
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+
+                    if (dt.Rows[i]["VLRRECEBER"] != DBNull.Value)
+                        ValorReceber  = Convert.ToDouble(dt.Rows[i]["VLRRECEBER"]);
+                }
+            }
+
+            return ValorReceber;
+
+        }
+
+        public double ConsultarValorAdmReceberMes()
+        {
+            DbContext db = new DbContext();
+
+            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@DTNOW", DateTime.Now.Date));
+            DataSet ds = db.ConsultaSQL(GI_SP_CONSULVALORADMRECEBER, parametros);
+            double ValorReceber = 0.00;
+
+            if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                DataTable dt = ds.Tables[0];
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+
+                    if (dt.Rows[i]["VLRADMRECEBER"] != DBNull.Value)
+                        ValorReceber = Convert.ToDouble(dt.Rows[i]["VLRADMRECEBER"]);
+                }
+            }
+
+            return ValorReceber;
+
+        }
+
+
+
+
     }
 }
+

@@ -214,3 +214,17 @@ F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\Gest
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\GI.SqlUtil.exe
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\GI.SqlUtil.pdb
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\GI.SqlUtil.exe.config
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.dll
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.WinForms.dll
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.Wpf.dll
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.pdb
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.xml
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.WinForms.pdb
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.WinForms.xml
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.Wpf.pdb
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\LiveCharts.Wpf.xml
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.Forms.CarregarForm.resources
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\CircularProgressBar.dll
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\WinFormAnimation.dll
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\CircularProgressBar.xml
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.Forms.AlertForm.resources

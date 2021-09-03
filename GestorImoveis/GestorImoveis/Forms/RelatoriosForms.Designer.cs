@@ -37,7 +37,7 @@
             // 
             // cboRelatorio
             // 
-            this.cboRelatorio.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cboRelatorio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboRelatorio.FormattingEnabled = true;
             this.cboRelatorio.Location = new System.Drawing.Point(12, 29);
             this.cboRelatorio.Name = "cboRelatorio";
@@ -47,6 +47,7 @@
             // 
             // ucRelBoletos1
             // 
+            this.ucRelBoletos1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ucRelBoletos1.Location = new System.Drawing.Point(2, 69);
             this.ucRelBoletos1.Name = "ucRelBoletos1";
             this.ucRelBoletos1.Size = new System.Drawing.Size(889, 400);
@@ -54,6 +55,7 @@
             // 
             // ucRelContratos1
             // 
+            this.ucRelContratos1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ucRelContratos1.Location = new System.Drawing.Point(2, 67);
             this.ucRelContratos1.Name = "ucRelContratos1";
             this.ucRelContratos1.Size = new System.Drawing.Size(889, 400);
@@ -61,6 +63,7 @@
             // 
             // ucListaAnuncio1
             // 
+            this.ucListaAnuncio1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ucListaAnuncio1.Location = new System.Drawing.Point(2, 56);
             this.ucListaAnuncio1.Name = "ucListaAnuncio1";
             this.ucListaAnuncio1.Size = new System.Drawing.Size(889, 400);
@@ -68,6 +71,7 @@
             // 
             // ucRelListaClientes1
             // 
+            this.ucRelListaClientes1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ucRelListaClientes1.Location = new System.Drawing.Point(2, 56);
             this.ucRelListaClientes1.Name = "ucRelListaClientes1";
             this.ucRelListaClientes1.Size = new System.Drawing.Size(889, 444);

@@ -469,6 +469,7 @@
             // 
             // txtVlrAluguel
             // 
+            this.txtVlrAluguel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtVlrAluguel.Location = new System.Drawing.Point(566, 101);
             this.txtVlrAluguel.Name = "txtVlrAluguel";
             this.txtVlrAluguel.Size = new System.Drawing.Size(136, 20);
@@ -477,6 +478,7 @@
             // 
             // txtVlrIptu
             // 
+            this.txtVlrIptu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtVlrIptu.Location = new System.Drawing.Point(711, 101);
             this.txtVlrIptu.Name = "txtVlrIptu";
             this.txtVlrIptu.Size = new System.Drawing.Size(121, 20);
@@ -484,6 +486,7 @@
             // 
             // txtVlrComissao
             // 
+            this.txtVlrComissao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtVlrComissao.Location = new System.Drawing.Point(90, 151);
             this.txtVlrComissao.Name = "txtVlrComissao";
             this.txtVlrComissao.Size = new System.Drawing.Size(133, 20);
@@ -491,6 +494,7 @@
             // 
             // txtVlrMulta
             // 
+            this.txtVlrMulta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtVlrMulta.Location = new System.Drawing.Point(281, 151);
             this.txtVlrMulta.Name = "txtVlrMulta";
             this.txtVlrMulta.Size = new System.Drawing.Size(140, 20);
@@ -498,6 +502,7 @@
             // 
             // txtVlrDesconto
             // 
+            this.txtVlrDesconto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtVlrDesconto.Location = new System.Drawing.Point(470, 151);
             this.txtVlrDesconto.Name = "txtVlrDesconto";
             this.txtVlrDesconto.Size = new System.Drawing.Size(100, 20);
@@ -551,6 +556,7 @@
             this.Controls.Add(this.gridBoletos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BoletosForm";
+            this.ShowInTaskbar = false;
             this.Text = "Boletos";
             ((System.ComponentModel.ISupportInitialize)(this.gridBoletos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();

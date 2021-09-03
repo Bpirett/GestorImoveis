@@ -78,6 +78,17 @@ namespace GestorImoveis.BLL
             return dalBoleto.ValidaBoletoPago(pCodContrato, pCodBoleto, pNumBoleto);
         }
 
+        public double ConsultarValorReceberMes()
+        {
+            DalBoleto dalBoleto = new DalBoleto();
+            return dalBoleto.ConsultarValorReceberMes();
+        }
+
+        public double ConsultarValorAdmReceberMes()
+        {
+            DalBoleto dalBoleto = new DalBoleto();
+            return dalBoleto.ConsultarValorAdmReceberMes();
+        }
 
     }
 }

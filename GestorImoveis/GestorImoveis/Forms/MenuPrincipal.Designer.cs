@@ -68,6 +68,7 @@
             this.PanelMenuVertical.Name = "PanelMenuVertical";
             this.PanelMenuVertical.Size = new System.Drawing.Size(200, 548);
             this.PanelMenuVertical.TabIndex = 0;
+            this.PanelMenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenuVertical_Paint);
             // 
             // btnDigitalizacao
             // 

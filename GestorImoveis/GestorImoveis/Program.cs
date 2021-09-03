@@ -18,7 +18,7 @@ namespace GestorImoveis
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             BLL.BoParametro.InicialParameter();
-            Application.Run(new MenuPrincipal());
+            Application.Run(new CarregarForm());
         }
     }
 }

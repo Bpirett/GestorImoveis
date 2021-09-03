@@ -222,6 +222,7 @@
             // 
             // txtSistema
             // 
+            this.txtSistema.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSistema.Location = new System.Drawing.Point(136, 128);
             this.txtSistema.Name = "txtSistema";
             this.txtSistema.Size = new System.Drawing.Size(59, 20);
@@ -229,6 +230,7 @@
             // 
             // txtCategoria
             // 
+            this.txtCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCategoria.Location = new System.Drawing.Point(205, 128);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(132, 20);
@@ -236,6 +238,7 @@
             // 
             // txtParametro
             // 
+            this.txtParametro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtParametro.Location = new System.Drawing.Point(136, 172);
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(138, 20);
@@ -243,6 +246,7 @@
             // 
             // txtDataAtualizacao
             // 
+            this.txtDataAtualizacao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDataAtualizacao.Location = new System.Drawing.Point(347, 128);
             this.txtDataAtualizacao.Name = "txtDataAtualizacao";
             this.txtDataAtualizacao.Size = new System.Drawing.Size(123, 20);
@@ -250,6 +254,7 @@
             // 
             // txtDescricao
             // 
+            this.txtDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescricao.Location = new System.Drawing.Point(280, 172);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(503, 20);
@@ -257,6 +262,7 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsuario.Location = new System.Drawing.Point(479, 128);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(135, 20);
@@ -264,6 +270,7 @@
             // 
             // lblSist
             // 
+            this.lblSist.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSist.AutoSize = true;
             this.lblSist.Location = new System.Drawing.Point(133, 112);
             this.lblSist.Name = "lblSist";
@@ -273,6 +280,7 @@
             // 
             // lblCategoria
             // 
+            this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(202, 112);
             this.lblCategoria.Name = "lblCategoria";
@@ -282,6 +290,7 @@
             // 
             // lblParametro
             // 
+            this.lblParametro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblParametro.AutoSize = true;
             this.lblParametro.Location = new System.Drawing.Point(136, 156);
             this.lblParametro.Name = "lblParametro";
@@ -291,6 +300,7 @@
             // 
             // lblDtAlt
             // 
+            this.lblDtAlt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDtAlt.AutoSize = true;
             this.lblDtAlt.Location = new System.Drawing.Point(344, 112);
             this.lblDtAlt.Name = "lblDtAlt";
@@ -300,6 +310,7 @@
             // 
             // lblUsu
             // 
+            this.lblUsu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblUsu.AutoSize = true;
             this.lblUsu.Location = new System.Drawing.Point(476, 112);
             this.lblUsu.Name = "lblUsu";
@@ -309,6 +320,7 @@
             // 
             // lblDescricao
             // 
+            this.lblDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.Location = new System.Drawing.Point(279, 156);
             this.lblDescricao.Name = "lblDescricao";
@@ -319,6 +331,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(133, 212);
             this.label1.Name = "label1";
@@ -328,6 +341,7 @@
             // 
             // txtConteudo
             // 
+            this.txtConteudo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtConteudo.Location = new System.Drawing.Point(195, 209);
             this.txtConteudo.Name = "txtConteudo";
             this.txtConteudo.Size = new System.Drawing.Size(588, 20);

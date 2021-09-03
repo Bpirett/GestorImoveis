@@ -98,5 +98,10 @@ namespace GestorImoveis.Forms
         {
             AbrirforminPanel(new DigitalizacaoForm());
         }
+
+        private void PanelMenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
