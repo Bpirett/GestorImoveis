@@ -85,6 +85,18 @@ namespace GestorImoveis.BLL
 
         }
 
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Service, Parametros = "C_TIMERSER", Descricao = "Difinir intervalo da execução do serviço de alerta", ConteudoDefault = "0")]
+        public static string C_TIMERSER
+        {
+            get
+            {
+                return BoParametro.ObterValueParametros("C_TIMERSER");
+            }
+
+        }
+
+
+
         #endregion
 
         #region Metodos

@@ -21,7 +21,7 @@ namespace GestorImoveis.Forms
         {
             InitializeComponent();
             MontarAmbiente();
-         
+
         }
 
         private void TimeResumo_Tick(object sender, EventArgs e)
@@ -84,7 +84,7 @@ namespace GestorImoveis.Forms
             cartesianChart1.AxisX.Add(new Axis
             {
                 Title = "Meses",
-                Labels = new[] { "Jan", "Fev", "Mar", "Abri", "Mai", "Jun", "Jul", "Ago", "Set", "Out","Nov", "Dez" }
+                Labels = new[] { "Jan", "Fev", "Mar", "Abri", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez" }
             });
 
             cartesianChart1.AxisY.Add(new Axis
@@ -103,5 +103,7 @@ namespace GestorImoveis.Forms
             MessageBox.Show("You clicked (" + chartPoint.X + "," + chartPoint.Y + ")");
         }
         #endregion
+  
     }
 }
+

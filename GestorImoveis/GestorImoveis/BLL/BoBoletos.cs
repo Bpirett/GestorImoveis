@@ -90,5 +90,13 @@ namespace GestorImoveis.BLL
             return dalBoleto.ConsultarValorAdmReceberMes();
         }
 
+        public bool BoletosVencer()
+        {
+            DalBoleto dalBoleto = new DalBoleto();
+            return dalBoleto.BoletosVencer();
+        }
+
+
+
     }
 }

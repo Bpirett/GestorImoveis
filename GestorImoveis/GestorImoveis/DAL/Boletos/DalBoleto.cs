@@ -34,6 +34,8 @@ namespace GestorImoveis.DAL.Boletos
 
         private const string GI_SP_CONSULVALORADMRECEBER = "GI_SP_ConsultValorAdmReceberMes";
 
+        private const string GI_SP_BOLETOSVENCER = "GI_SP_BoletosVencer";
+
         #endregion
 
 
@@ -429,6 +431,21 @@ namespace GestorImoveis.DAL.Boletos
 
             return ValorReceber;
 
+        }
+
+
+        public bool BoletosVencer()
+        {
+            DbContext db = new DbContext();
+
+            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@DATANOW", DateTime.Now.Date));
+            DataSet ds = db.ConsultaSQL(GI_SP_BOLETOSVENCER, parametros);
+
+            if (ds.Tables[0].Rows.Count > 0)
+                return true;
+
+            return false;
         }
 
 

@@ -227,4 +227,3 @@ F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\Gest
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\CircularProgressBar.dll
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\WinFormAnimation.dll
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\CircularProgressBar.xml
-F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.Forms.AlertForm.resources

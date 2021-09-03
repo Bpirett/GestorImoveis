@@ -28,7 +28,8 @@ namespace GestorImoveis.DML
             Relatorios,
             Clientes,
             Geral,
-            Anuncios
+            Anuncios,
+            Service
         }
 
 

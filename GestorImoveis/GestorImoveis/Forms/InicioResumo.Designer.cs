@@ -106,11 +106,11 @@
             // lblAnuncios
             // 
             this.lblAnuncios.AutoSize = true;
-            this.lblAnuncios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnuncios.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblAnuncios.Location = new System.Drawing.Point(42, 109);
+            this.lblAnuncios.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnuncios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblAnuncios.Location = new System.Drawing.Point(44, 104);
             this.lblAnuncios.Name = "lblAnuncios";
-            this.lblAnuncios.Size = new System.Drawing.Size(46, 25);
+            this.lblAnuncios.Size = new System.Drawing.Size(61, 33);
             this.lblAnuncios.TabIndex = 16;
             this.lblAnuncios.Text = "lbl1";
             // 
@@ -162,11 +162,11 @@
             // lblLocatarios
             // 
             this.lblLocatarios.AutoSize = true;
-            this.lblLocatarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocatarios.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblLocatarios.Location = new System.Drawing.Point(42, 112);
+            this.lblLocatarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocatarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblLocatarios.Location = new System.Drawing.Point(44, 108);
             this.lblLocatarios.Name = "lblLocatarios";
-            this.lblLocatarios.Size = new System.Drawing.Size(46, 25);
+            this.lblLocatarios.Size = new System.Drawing.Size(61, 33);
             this.lblLocatarios.TabIndex = 16;
             this.lblLocatarios.Text = "lbl1";
             // 
@@ -239,11 +239,11 @@
             // lblLocadores
             // 
             this.lblLocadores.AutoSize = true;
-            this.lblLocadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocadores.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblLocadores.Location = new System.Drawing.Point(40, 111);
+            this.lblLocadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocadores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblLocadores.Location = new System.Drawing.Point(41, 106);
             this.lblLocadores.Name = "lblLocadores";
-            this.lblLocadores.Size = new System.Drawing.Size(46, 25);
+            this.lblLocadores.Size = new System.Drawing.Size(61, 33);
             this.lblLocadores.TabIndex = 16;
             this.lblLocadores.Text = "lbl1";
             // 
@@ -283,11 +283,11 @@
             // lblClientes
             // 
             this.lblClientes.AutoSize = true;
-            this.lblClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblClientes.Location = new System.Drawing.Point(38, 113);
+            this.lblClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblClientes.Location = new System.Drawing.Point(38, 109);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(46, 25);
+            this.lblClientes.Size = new System.Drawing.Size(61, 33);
             this.lblClientes.TabIndex = 1;
             this.lblClientes.Text = "lbl1";
             // 
@@ -362,7 +362,7 @@
             // 
             this.lblReceber.AutoSize = true;
             this.lblReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceber.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblReceber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblReceber.Location = new System.Drawing.Point(6, 115);
             this.lblReceber.Name = "lblReceber";
             this.lblReceber.Size = new System.Drawing.Size(30, 18);
@@ -417,11 +417,11 @@
             // lblContratos
             // 
             this.lblContratos.AutoSize = true;
-            this.lblContratos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContratos.ForeColor = System.Drawing.Color.BlueViolet;
-            this.lblContratos.Location = new System.Drawing.Point(41, 110);
+            this.lblContratos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContratos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblContratos.Location = new System.Drawing.Point(41, 105);
             this.lblContratos.Name = "lblContratos";
-            this.lblContratos.Size = new System.Drawing.Size(46, 25);
+            this.lblContratos.Size = new System.Drawing.Size(61, 33);
             this.lblContratos.TabIndex = 16;
             this.lblContratos.Text = "lbl1";
             // 
@@ -486,7 +486,7 @@
             // 
             this.lblReceberAdm.AutoSize = true;
             this.lblReceberAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceberAdm.ForeColor = System.Drawing.Color.BlueViolet;
+            this.lblReceberAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblReceberAdm.Location = new System.Drawing.Point(6, 115);
             this.lblReceberAdm.Name = "lblReceberAdm";
             this.lblReceberAdm.Size = new System.Drawing.Size(30, 18);
