@@ -186,7 +186,6 @@ F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\ru\M
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.csprojAssemblyReference.cache
-F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\Interop.Office.dll
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.csproj.ResolveComReference.cache
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.Forms.Anuncios.resources
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.Forms.BoletosForm.resources
@@ -227,3 +226,5 @@ F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\Gest
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\CircularProgressBar.dll
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\WinFormAnimation.dll
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\CircularProgressBar.xml
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.Forms.AlertForm.resources
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\Interop.Office.dll

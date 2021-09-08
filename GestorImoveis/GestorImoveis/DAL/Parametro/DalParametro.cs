@@ -136,8 +136,8 @@ namespace GestorImoveis.DAL.Parametro
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
             DML.Parametro parametro = new DML.Parametro();
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@TPSIST", pSistema));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@TPCATEG", parametro.ConverterTipoCategoria(pCategoria)));
+            //parametros.Add(new System.Data.SqlClient.SqlParameter("@TPSIST", pSistema));
+            //parametros.Add(new System.Data.SqlClient.SqlParameter("@TPCATEG", parametro.ConverterTipoCategoria(pCategoria)));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@TPPARAM", pParametro));
 
 

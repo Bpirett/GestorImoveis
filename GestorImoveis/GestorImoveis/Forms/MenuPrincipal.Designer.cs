@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.PanelMenuVertical = new System.Windows.Forms.Panel();
             this.btnDigitalizacao = new System.Windows.Forms.Button();
             this.btnRelatorios = new System.Windows.Forms.Button();
@@ -38,18 +40,24 @@
             this.btnCadContratos = new System.Windows.Forms.Button();
             this.btnCadCliente = new System.Windows.Forms.Button();
             this.PanelBarraTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PictureMinimized = new System.Windows.Forms.PictureBox();
+            this.picture_Maximize = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.btnslide = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.MenuNotificacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmi_Restaurar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmi_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.TimerNotificacao = new System.Windows.Forms.Timer(this.components);
             this.PanelMenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.PanelBarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMinimized)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_Maximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).BeginInit();
+            this.MenuNotificacoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenuVertical
@@ -112,9 +120,9 @@
             // 
             this.btnHome.BackgroundImage = global::GestorImoveis.Properties.Resources.G_Logo_icon_48px;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHome.Location = new System.Drawing.Point(3, 0);
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(56, 72);
+            this.btnHome.Size = new System.Drawing.Size(53, 72);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 6;
             this.btnHome.TabStop = false;
@@ -218,8 +226,8 @@
             // PanelBarraTitulo
             // 
             this.PanelBarraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PanelBarraTitulo.Controls.Add(this.pictureBox2);
-            this.PanelBarraTitulo.Controls.Add(this.pictureBox1);
+            this.PanelBarraTitulo.Controls.Add(this.PictureMinimized);
+            this.PanelBarraTitulo.Controls.Add(this.picture_Maximize);
             this.PanelBarraTitulo.Controls.Add(this.btnExit);
             this.PanelBarraTitulo.Controls.Add(this.btnslide);
             this.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -229,25 +237,29 @@
             this.PanelBarraTitulo.TabIndex = 1;
             this.PanelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
             // 
-            // pictureBox2
+            // PictureMinimized
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(805, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.PictureMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureMinimized.Image = global::GestorImoveis.Properties.Resources.minimize;
+            this.PictureMinimized.Location = new System.Drawing.Point(805, 0);
+            this.PictureMinimized.Name = "PictureMinimized";
+            this.PictureMinimized.Size = new System.Drawing.Size(25, 25);
+            this.PictureMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureMinimized.TabIndex = 3;
+            this.PictureMinimized.TabStop = false;
+            this.PictureMinimized.Click += new System.EventHandler(this.PictureMinimized_Click);
             // 
-            // pictureBox1
+            // picture_Maximize
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(836, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.picture_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picture_Maximize.Image = global::GestorImoveis.Properties.Resources._32minimize_84242__2_;
+            this.picture_Maximize.Location = new System.Drawing.Point(836, 0);
+            this.picture_Maximize.Name = "picture_Maximize";
+            this.picture_Maximize.Size = new System.Drawing.Size(25, 25);
+            this.picture_Maximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_Maximize.TabIndex = 2;
+            this.picture_Maximize.TabStop = false;
+            this.picture_Maximize.Click += new System.EventHandler(this.picture_Maximize_Click);
             // 
             // btnExit
             // 
@@ -283,6 +295,40 @@
             this.PanelContenedor.Size = new System.Drawing.Size(892, 499);
             this.PanelContenedor.TabIndex = 2;
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.ContextMenuStrip = this.MenuNotificacoes;
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "Gestor Imoveis";
+            this.notifyIcon.Visible = true;
+            // 
+            // MenuNotificacoes
+            // 
+            this.MenuNotificacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmi_Restaurar,
+            this.tsmi_Exit});
+            this.MenuNotificacoes.Name = "contextMenuStrip2";
+            this.MenuNotificacoes.Size = new System.Drawing.Size(124, 48);
+            this.MenuNotificacoes.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuNotificacoes_ItemClicked);
+            // 
+            // tsmi_Restaurar
+            // 
+            this.tsmi_Restaurar.Name = "tsmi_Restaurar";
+            this.tsmi_Restaurar.Size = new System.Drawing.Size(123, 22);
+            this.tsmi_Restaurar.Text = "Restaurar";
+            // 
+            // tsmi_Exit
+            // 
+            this.tsmi_Exit.Name = "tsmi_Exit";
+            this.tsmi_Exit.Size = new System.Drawing.Size(123, 22);
+            this.tsmi_Exit.Text = "Exit";
+            // 
+            // TimerNotificacao
+            // 
+            this.TimerNotificacao.Enabled = true;
+            this.TimerNotificacao.Interval = 1000;
+            this.TimerNotificacao.Tick += new System.EventHandler(this.TimerNotificacao_Tick);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,15 +338,17 @@
             this.Controls.Add(this.PanelBarraTitulo);
             this.Controls.Add(this.PanelMenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuPrincipal";
             this.Text = "Menucs";
             this.PanelMenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.PanelBarraTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMinimized)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_Maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).EndInit();
+            this.MenuNotificacoes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,10 +366,15 @@
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnBoletos;
         private System.Windows.Forms.Button btnAnuncios;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PictureMinimized;
+        private System.Windows.Forms.PictureBox picture_Maximize;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Button btnRelatorios;
         private System.Windows.Forms.Button btnDigitalizacao;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ContextMenuStrip MenuNotificacoes;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_Restaurar;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_Exit;
+        private System.Windows.Forms.Timer TimerNotificacao;
     }
 }

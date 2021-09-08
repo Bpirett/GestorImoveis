@@ -9,8 +9,6 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_GI", "Setup\Setup_GI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GI.SqlUtil", "GI.SqlUtil\GI.SqlUtil.csproj", "{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GI.Service", "GI.Service\GI.Service.csproj", "{4780BC0C-1BEC-4103-81B6-E930597F5846}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4780BC0C-1BEC-4103-81B6-E930597F5846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4780BC0C-1BEC-4103-81B6-E930597F5846}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4780BC0C-1BEC-4103-81B6-E930597F5846}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4780BC0C-1BEC-4103-81B6-E930597F5846}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

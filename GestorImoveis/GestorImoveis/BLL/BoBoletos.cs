@@ -45,7 +45,7 @@ namespace GestorImoveis.BLL
                 throw;
             }
 
-            return UltCodCod.ToString().PadLeft(3, '0');
+            return UltCodCod.ToString().PadLeft(5, '0');
         }
 
         public List<Boleto> ObterBoleto(string pCodContrato, string pCodBoleto, string pNumBoleto)

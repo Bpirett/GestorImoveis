@@ -168,6 +168,12 @@
     <Compile Include="DML\Endereco.cs" />
     <Compile Include="DML\Parametro.cs" />
     <Compile Include="DML\Relatorio.cs" />
+    <Compile Include="Forms\AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlertForm.Designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Anuncios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +299,9 @@
     <Compile Include="Reports\RelBoletos\UserControl\UcRelBoletos.Designer.cs">
       <DependentUpon>UcRelBoletos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Anuncios.resx">
       <DependentUpon>Anuncios.cs</DependentUpon>
     </EmbeddedResource>
@@ -484,6 +493,14 @@
     <None Include="Resources\icons8_cancel_25px.png" />
     <None Include="Resources\info.png" />
     <None Include="Resources\warning.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\favicon.png" />
+    <None Include="Resources\GestorImoveis Logotipo.png" />
+    <None Include="Resources\favicon %282%29.ico" />
+    <None Include="Resources\Icon_LogoNew.ico" />
+    <None Include="Resources\1492790945-39minimize_84242.ico" />
+    <None Include="Resources\1492790945-39minimize_84242 %281%29.ico" />
+    <None Include="Resources\32minimize_84242 %282%29.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

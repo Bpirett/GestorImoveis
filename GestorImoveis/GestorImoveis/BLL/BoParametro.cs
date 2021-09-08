@@ -1,5 +1,6 @@
 ﻿using GestorImoveis.DAL.Parametro;
 using GestorImoveis.DML;
+using GestorImoveis.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,7 +15,7 @@ namespace GestorImoveis.BLL
     {
         #region Parametros
 
-        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Boletos, Parametros = "R_DIRMOBOL", Descricao = "Diretorio onde se encontra o documento modelo de boletos", ConteudoDefault = @"C:\GestorImoveis\ModelosDoc\")]
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Boletos, Parametros = "R_DIRMOBOL", Descricao = "Define Diretorio onde se encontra o documento modelo de boletos", ConteudoDefault = @"C:\Users\bpirett\Pictures\Doc")]
         public static string R_DIRMOBOL
         {
             get
@@ -35,7 +36,7 @@ namespace GestorImoveis.BLL
         }
 
 
-        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Anuncios, Parametros = "R_DIRANUN", Descricao = "Diretorio de imagens de anuncios", ConteudoDefault = @"C:\GestorImoveis\FotosAnuncio")]
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Anuncios, Parametros = "R_DIRANUN", Descricao = "Define Diretorio de imagens de anuncios", ConteudoDefault = @"C:\GestorImoveis\FotosAnuncio")]
         public static string R_DIRANUN
         {
             get
@@ -45,7 +46,7 @@ namespace GestorImoveis.BLL
 
         }
 
-        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Contratos, Parametros = "R_DIRDIGIT", Descricao = "Diretorio de digitalização de documentos do aluguel", ConteudoDefault = @"C:\GestorImoveis\DocumentosDigitalizados")]
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Contratos, Parametros = "R_DIRDIGIT", Descricao = "Define diretorio de digitalização de documentos do aluguel", ConteudoDefault = @"C:\GestorImoveis\DocumentosDigitalizados")]
         public static string R_DIRDIGIT
         {
             get
@@ -55,7 +56,7 @@ namespace GestorImoveis.BLL
 
         }
 
-        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Geral, Parametros = "R_DIRLOGER", Descricao = "Diretorio de Log de erro da Aplicação", ConteudoDefault = @"C:\GestorImoveis\Log")]
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Geral, Parametros = "R_DIRLOGER", Descricao = "Define diretorio de Log de erro da Aplicação", ConteudoDefault = @"C:\GestorImoveis\Log")]
         public static string R_DIRLOGER
         {
             get
@@ -65,7 +66,7 @@ namespace GestorImoveis.BLL
 
         }
 
-        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Geral, Parametros = "R_DIRDOWND", Descricao = "Diretorio de download", ConteudoDefault = "")]
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Geral, Parametros = "R_DIRDOWND", Descricao = "Define diretorio de download", ConteudoDefault = "")]
         public static string R_DIRDOWND
         {
             get
@@ -75,7 +76,7 @@ namespace GestorImoveis.BLL
 
         }
 
-        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Contratos, Parametros = "C_PORADMIN", Descricao = "Difinir a porcentagem da administração", ConteudoDefault = "8")]
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Contratos, Parametros = "C_PORADMIN", Descricao = "Define a porcentagem da administração", ConteudoDefault = "8")]
         public static string C_PORADMIN
         {
             get
@@ -85,12 +86,12 @@ namespace GestorImoveis.BLL
 
         }
 
-        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Service, Parametros = "C_TIMERSER", Descricao = "Difinir intervalo da execução do serviço de alerta", ConteudoDefault = "0")]
-        public static string C_TIMERSER
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Contratos, Parametros = "C_VALENTRA", Descricao = "Define se data de entrada e menor ou não", ConteudoDefault = "S")]
+        public static bool C_VALENTRA
         {
             get
             {
-                return BoParametro.ObterValueParametros("C_TIMERSER");
+                return UtilHelpers.ConverterSimNao(BoParametro.ObterValueParametros("C_VALENTRA"));
             }
 
         }
@@ -121,6 +122,7 @@ namespace GestorImoveis.BLL
 
             return retorno;
         }
+
 
 
         public static Parametro ObterParametro(string pSistema, string pParametro, Parametro.ParametroCategoria pCategoria)
@@ -167,12 +169,6 @@ namespace GestorImoveis.BLL
                     boParametro.IncluirParametro(atributoParametro);
                 }
             }
-            for (int i = 0; i < parametros.Count; i++)
-            {
-
-            }
-
-
         }
 
         private AtributoParametro ResgatarAtributoPorNome(string pNomeParametro)

@@ -774,7 +774,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Anuncios";
             this.Text = "Anuncios";
-            this.Load += new System.EventHandler(this.Anuncios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnPesquisa)).EndInit();

@@ -104,7 +104,7 @@
             this.gridBoletos.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridBoletos.EnableHeadersVisualStyles = false;
             this.gridBoletos.GridColor = System.Drawing.Color.Black;
-            this.gridBoletos.Location = new System.Drawing.Point(51, 271);
+            this.gridBoletos.Location = new System.Drawing.Point(36, 273);
             this.gridBoletos.Name = "gridBoletos";
             this.gridBoletos.ReadOnly = true;
             this.gridBoletos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -119,7 +119,7 @@
             this.gridBoletos.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.gridBoletos.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridBoletos.Size = new System.Drawing.Size(781, 175);
+            this.gridBoletos.Size = new System.Drawing.Size(801, 175);
             this.gridBoletos.TabIndex = 1;
             this.gridBoletos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridBoletos_CellContentClick);
             // 

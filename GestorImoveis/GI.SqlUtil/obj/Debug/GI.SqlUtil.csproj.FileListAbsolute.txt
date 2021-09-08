@@ -4,3 +4,4 @@ F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GI.SqlUtil\bin\Debug\GI.SqlU
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GI.SqlUtil\obj\Debug\GI.SqlUtil.csproj.CoreCompileInputs.cache
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GI.SqlUtil\obj\Debug\GI.SqlUtil.exe
 F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GI.SqlUtil\obj\Debug\GI.SqlUtil.pdb
+F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GI.SqlUtil\obj\Debug\GI.SqlUtil.csprojAssemblyReference.cache

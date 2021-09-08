@@ -172,20 +172,29 @@ namespace GestorImoveis.Forms
 
 
                 DateTime DtEntrada = Convert.ToDateTime(txtDataEntrada.Text);
-                if (DtEntrada >= DateTime.Now.Date)
-                {
 
-                    txtDataSaida.Text = DtEntrada.AddMonths((int)txtMesesContrato.Value).ToString();
+                if (BoParametro.C_VALENTRA)
+                {
+                    if (DtEntrada >= DateTime.Now.Date)
+                    {
+
+                        txtDataSaida.Text = DtEntrada.AddMonths((int)txtMesesContrato.Value).ToString();
+                    }
+                    else
+                    {
+                        if (!Alteracao)
+                        {
+                            lblMsgErro.Visible = true;
+                            lblMsgErro.Text = "Data de Entrada precisa ser igual ou maior que a data de hoje!";
+                        }
+
+                    }
                 }
                 else
                 {
-                    if (!Alteracao)
-                    {
-                        lblMsgErro.Visible = true;
-                        lblMsgErro.Text = "Data de Entrada precisa ser igual ou maior que a data de hoje!";
-                    }
-
+                    txtDataSaida.Text = DtEntrada.AddMonths((int)txtMesesContrato.Value).ToString();
                 }
+            
             }
             catch (Exception ex)
             {
@@ -562,7 +571,7 @@ namespace GestorImoveis.Forms
             else
                 BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblDtEntrada.Text);
 
-            if (DmlContrato.DataEntrada.Year != DateTime.Now.Year || DmlContrato.DataEntrada <= DateTime.MinValue || DmlContrato.DataEntrada >= DateTime.MaxValue)
+            if ((DmlContrato.DataEntrada.Year != DateTime.Now.Year || DmlContrato.DataEntrada <= DateTime.MinValue || DmlContrato.DataEntrada >= DateTime.MaxValue) && BoParametro.C_VALENTRA)
                 BoErro.DesErro(BoErro.CERRO_DATA_INVALIDA_NO_ANO_CORRENTE, lblDtEntrada.Text);
 
 
@@ -627,7 +636,7 @@ namespace GestorImoveis.Forms
             {
                 DmlContrato.Boletos = new List<Boleto>();
                 BoBoletos boBoletos = new BoBoletos();
-                string dtvencimento = $"{DmlContrato.DiaPagamento}/0{DateTime.Now.Month}/{DateTime.Now.Year}";
+                string dtvencimento = $"{DmlContrato.DiaPagamento}/{DmlContrato.DataEntrada.Month}/{DmlContrato.DataEntrada.Year}";
                 DateTime vencimento = Convert.ToDateTime(dtvencimento).Date;
                 Periodo = DmlContrato.DataEntrada;
                 UltimoPeriodo = DmlContrato.DataEntrada.AddMonths(1);
@@ -643,7 +652,7 @@ namespace GestorImoveis.Forms
                     Boletos.Locatario = DmlContrato.Locatario;
                     Boletos.Valor = DmlContrato.Valor;
                     Boletos.VlrIptu = DmlContrato.VlrIptu;
-                    Boletos.DataVencimento = vencimento.AddMonths(i);
+                    Boletos.DataVencimento = vencimento.AddMonths(i+1);
                     Boletos.JrComissao = Convert.ToDouble(BoParametro.C_PORADMIN);
                     double convrtcom = Convert.ToDouble(Boletos.JrComissao);
                     Boletos.VlrComissao = (convrtcom / 100) * Boletos.Valor;

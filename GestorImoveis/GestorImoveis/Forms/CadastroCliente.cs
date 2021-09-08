@@ -198,6 +198,33 @@ namespace GestorImoveis.Forms
             }
         }
 
+        private void ckNaoInfEnd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckNaoInfEnd.Checked == true)
+            {
+                txtEndereco.Enabled = false;
+                txtBairro.Enabled = false;
+                txtUF.Enabled = false;
+                txtCidade.Enabled = false;
+                txtComplemento.Enabled = false;
+                txtComplemento2.Enabled = false;
+                txtCEP.Enabled = false;
+                txtNumeroImovel.Enabled = false;
+            }
+            else
+            {
+                txtEndereco.Enabled = true;
+                txtBairro.Enabled = true;
+                txtUF.Enabled = true;
+                txtCidade.Enabled = true;
+                txtComplemento.Enabled = true;
+                txtComplemento2.Enabled = true;
+                txtCEP.Enabled = true;
+                txtNumeroImovel.Enabled = true;
+            }
+
+        }
+
         #endregion
 
         #region Metodos
@@ -369,11 +396,8 @@ namespace GestorImoveis.Forms
             if (!UtilHelpers.ValidaCPF(txtCPF.Text))
                 BoErro.DesErro(BoErro.CERRO_CPF_INVALIDO, txtCPF.Text);
 
-
             if (!string.IsNullOrEmpty(txtEmail.Text))
                 DmlCliente.Email = txtEmail.Text;
-            else
-                BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblEmail.Text);
 
             if (!string.IsNullOrEmpty(txtNumeroFixo.Text))
                 DmlCliente.TelefoneFixo = txtNumeroFixo.Text;
@@ -392,32 +416,32 @@ namespace GestorImoveis.Forms
 
             if (!string.IsNullOrEmpty(txtCEP.Text))
                 DmlCliente.Endereco.Cep = txtCEP.Text;
-            else
+            else if (!ckNaoInfEnd.Checked == true)
                 BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblCEP.Text);
 
             if (!string.IsNullOrEmpty(txtNumeroImovel.Text))
                 DmlCliente.Endereco.NumeroImovel = Convert.ToInt32(txtNumeroImovel.Text);
-            else
+            else if (!ckNaoInfEnd.Checked == true)
                 BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblNumeroImovel.Text);
 
             if (!string.IsNullOrEmpty(txtEndereco.Text))
                 DmlCliente.Endereco.End = Convert.ToString(txtEndereco.Text);
-            else
+            else if (!ckNaoInfEnd.Checked == true)
                 BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblEnd.Text);
 
             if (!string.IsNullOrEmpty(txtBairro.Text))
                 DmlCliente.Endereco.Bairro = txtBairro.Text;
-            else
+            else if (!ckNaoInfEnd.Checked == true)
                 BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblBairro.Text);
 
             if (!string.IsNullOrEmpty(txtCidade.Text))
                 DmlCliente.Endereco.Cidade = txtCidade.Text;
-            else
+            else if (!ckNaoInfEnd.Checked == true)
                 BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblCidade.Text);
 
             if (!string.IsNullOrEmpty(txtUF.Text))
                 DmlCliente.Endereco.Uf = txtUF.Text;
-            else
+            else if (!ckNaoInfEnd.Checked == true)
                 BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblUF.Text);
 
             DmlCliente.Endereco.Complemento = txtComplemento.Text;
@@ -457,6 +481,7 @@ namespace GestorImoveis.Forms
             txt.Leave += UtilHelpers.RetornarMascaraCEP;
             txt.KeyPress += UtilHelpers.ApenasValorNumerico;
         }
+
         #endregion
 
 

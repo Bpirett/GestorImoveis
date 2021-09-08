@@ -397,9 +397,9 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(26, 3);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 18);
+            this.label14.Size = new System.Drawing.Size(64, 18);
             this.label14.TabIndex = 15;
-            this.label14.Text = "Receber:";
+            this.label14.Text = "Receber";
             // 
             // panel5
             // 
@@ -464,6 +464,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 239);
             this.label2.Name = "label2";
@@ -487,7 +488,7 @@
             this.lblReceberAdm.AutoSize = true;
             this.lblReceberAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReceberAdm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblReceberAdm.Location = new System.Drawing.Point(6, 115);
+            this.lblReceberAdm.Location = new System.Drawing.Point(11, 115);
             this.lblReceberAdm.Name = "lblReceberAdm";
             this.lblReceberAdm.Size = new System.Drawing.Size(30, 18);
             this.lblReceberAdm.TabIndex = 16;
@@ -519,18 +520,18 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(6, 0);
+            this.label7.Location = new System.Drawing.Point(6, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 18);
+            this.label7.Size = new System.Drawing.Size(98, 18);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Receber Adm:";
+            this.label7.Text = "Receber Adm";
             // 
             // cartesianChart1
             // 
             this.cartesianChart1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cartesianChart1.Location = new System.Drawing.Point(14, 222);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(474, 242);
+            this.cartesianChart1.Size = new System.Drawing.Size(475, 242);
             this.cartesianChart1.TabIndex = 51;
             this.cartesianChart1.Text = "cartesianChart1";
             // 

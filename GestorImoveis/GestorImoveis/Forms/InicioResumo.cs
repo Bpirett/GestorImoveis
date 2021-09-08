@@ -103,7 +103,6 @@ namespace GestorImoveis.Forms
             MessageBox.Show("You clicked (" + chartPoint.X + "," + chartPoint.Y + ")");
         }
         #endregion
-  
     }
 }
 

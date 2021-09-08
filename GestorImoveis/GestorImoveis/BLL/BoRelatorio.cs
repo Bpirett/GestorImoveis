@@ -20,28 +20,39 @@ namespace GestorImoveis.BLL
         /// </summary>
         public void EmitirBoleto(string pCodContrato, string pCodBoleto, string pNumBoleto)
         {
-            Stream docStream = File.OpenRead(Path.GetFullPath(BoParametro.R_DIRMOBOL));
-            WordDocument document = new WordDocument(docStream, FormatType.Docx);
-            docStream.Dispose();
 
-            string[] fieldNames = { "RefBoleto", "VlrAluguel", "VlrIptu", "VlrDesc", "VlrMulta", "VlrOutros", "VlrTotal", "VlrAdmin", "Locatario", "Locador", "TipoImovel", "EnderecoImovel", "DataIni", "DataFim", "DataVencimentor", "DataAtual", "NumParcela", "VlrTotalLocat" };
+            try
+            {
+                Stream docStream = File.OpenRead(Path.GetFullPath(BoParametro.R_DIRMOBOL));
+                WordDocument document = new WordDocument(docStream, FormatType.Docx);
+                docStream.Dispose();
 
-            BoBoletos boBoletos = new BoBoletos();
-            Boleto boleto = boBoletos.ObterBoletoRel(pCodContrato, pCodBoleto, pNumBoleto);
+                string[] fieldNames = { "RefBoleto", "VlrAluguel", "VlrIptu", "VlrDesc", "VlrMulta", "VlrOutros", "VlrTotal", "VlrAdmin", "Locatario", "Locador", "TipoImovel", "EnderecoImovel", "DataIni", "DataFim", "DataVencimentor", "DataAtual", "NumParcela", "VlrTotalLocat" };
+
+                BoBoletos boBoletos = new BoBoletos();
+                Boleto boleto = boBoletos.ObterBoletoRel(pCodContrato, pCodBoleto, pNumBoleto);
 
 
-            string[] fieldValues = { boleto.Codigo.ToString(), boleto.Valor.ToString("C2"), boleto.VlrIptu.ToString("C2"), boleto.VlrDesconto.ToString("C2"), boleto.VlrMulta.ToString("C2"), "0,00", CalcularValor(boleto,false).ToString(), boleto.VlrComissao.ToString("C2"),
-            boleto.Locatario,boleto.Locador ,boleto.TipoImovel, boleto.Endereco, UtilHelpers.ConverteData(boleto.PeriodoInicio), UtilHelpers.ConverteData(boleto.PeriodoFim), UtilHelpers.ConverteData(boleto.DataVencimento), DateTime.Now.ToLongDateString(), boleto.NumBoleto.ToString(), CalcularValor(boleto,true).ToString() };
-            //Performs the mail merge
-            document.MailMerge.Execute(fieldNames, fieldValues);
+                string[] fieldValues = { boleto.Codigo.ToString(), boleto.Valor.ToString("C2"), boleto.VlrIptu.ToString("C2"), boleto.VlrDesconto.ToString("C2"), boleto.VlrMulta.ToString("C2"), "0,00", CalcularValor(boleto,false).ToString("C2"), boleto.VlrComissao.ToString("C2"),
+            boleto.Locatario,boleto.Locador ,boleto.TipoImovel, boleto.Endereco, UtilHelpers.ConverteData(boleto.PeriodoInicio), UtilHelpers.ConverteData(boleto.PeriodoFim), UtilHelpers.ConverteData(boleto.DataVencimento), DateTime.Now.ToLongDateString(), boleto.NumBoleto.ToString(), CalcularValor(boleto,true).ToString("C2") };
+                //Performs the mail merge
+                document.MailMerge.Execute(fieldNames, fieldValues);
 
-            //Saves the Word document as DOCX format
-            docStream = File.Create(Path.GetFullPath(string.Format(BoParametro.R_DIRDOWND + @"\Boleto_{0}_Parc_{1}.Docx", boleto.CodContrato, boleto.NumBoleto)));
-            document.Save(docStream, FormatType.Docx);
-            document.Close();
-            docStream.Dispose();
-            //Releases the resources occupied by WordDocument instance
-            document.Dispose();
+                //Saves the Word document as DOCX format
+                docStream = File.Create(Path.GetFullPath(string.Format(BoParametro.R_DIRDOWND + String.Format("\\Boleto_{0}_Parc_{1}.Docx", boleto.Codigo, boleto.NumBoleto))));
+                document.Save(docStream, FormatType.Docx);
+                document.Close();
+                docStream.Dispose();
+                //Releases the resources occupied by WordDocument instance
+                document.Dispose();
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+
+  
         }
 
 

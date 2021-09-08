@@ -75,6 +75,7 @@
             this.lblEnd = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.lblCEP = new System.Windows.Forms.Label();
+            this.ckNaoInfEnd = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnPesquisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -563,12 +564,24 @@
             this.lblCEP.TabIndex = 101;
             this.lblCEP.Text = "CEP:";
             // 
+            // ckNaoInfEnd
+            // 
+            this.ckNaoInfEnd.AutoSize = true;
+            this.ckNaoInfEnd.Location = new System.Drawing.Point(704, 110);
+            this.ckNaoInfEnd.Name = "ckNaoInfEnd";
+            this.ckNaoInfEnd.Size = new System.Drawing.Size(147, 17);
+            this.ckNaoInfEnd.TabIndex = 117;
+            this.ckNaoInfEnd.Text = "Não Informou o endereço";
+            this.ckNaoInfEnd.UseVisualStyleBackColor = true;
+            this.ckNaoInfEnd.CheckedChanged += new System.EventHandler(this.ckNaoInfEnd_CheckedChanged);
+            // 
             // CadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(892, 499);
+            this.Controls.Add(this.ckNaoInfEnd);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.lblCidade);
             this.Controls.Add(this.txtComplemento);
@@ -668,5 +681,6 @@
         private System.Windows.Forms.Label lblEnd;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label lblCEP;
+        private System.Windows.Forms.CheckBox ckNaoInfEnd;
     }
 }

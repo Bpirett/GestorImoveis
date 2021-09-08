@@ -107,7 +107,6 @@ namespace GestorImoveis.Forms
 
                 var table = boBoletos.ObterBoleto(CodContrato, Codboleto, NumBoleto);
 
-
                 txtId.Text = Convert.ToString(table[0].Codigo);
                 txtNumBol.Text = Convert.ToString(table[0].NumBoleto);
                 txtEndereco.Text = Convert.ToString(table[0].Endereco);
@@ -131,8 +130,22 @@ namespace GestorImoveis.Forms
 
             if (e.ColumnIndex == 21 || e.ColumnIndex == 1)
             {
-                BoRelatorio boRelatorio = new BoRelatorio();
-                boRelatorio.EmitirBoleto(CodContrato, Codboleto, NumBoleto);
+                try
+                {
+                    BoRelatorio boRelatorio = new BoRelatorio();
+                    boRelatorio.EmitirBoleto(CodContrato, Codboleto, NumBoleto);
+
+                    AlertForm alertForm = new AlertForm();
+                    alertForm.GetAlertSecessGeneric("Boleto gerado com sucesso!!");
+                    alertForm.ShowDialog();
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Falha ao gerar o boleto", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+          
             }
 
             if (e.ColumnIndex == 22 || e.ColumnIndex == 2)
@@ -324,7 +337,7 @@ namespace GestorImoveis.Forms
             }
 
             gridBoletos.Columns["Codigo"].HeaderText = "Cod.";
-            gridBoletos.Columns["Codigo"].Width = 30;
+            gridBoletos.Columns["Codigo"].Width = 40;
             gridBoletos.Columns["Codigo"].DisplayIndex = 0;
 
             gridBoletos.Columns["CodContrato"].Visible = false;
