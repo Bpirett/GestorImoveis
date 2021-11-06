@@ -484,9 +484,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BLL\Interfaces\" />
-    <Folder Include="Reports\RelContratos\Procedure\" />
-    <Folder Include="Reports\RelListaAnuncios\Procedure\" />
-    <Folder Include="Reports\RelListaClientes\Procedure\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error.png" />
@@ -501,6 +498,43 @@
     <None Include="Resources\1492790945-39minimize_84242.ico" />
     <None Include="Resources\1492790945-39minimize_84242 %281%29.ico" />
     <None Include="Resources\32minimize_84242 %282%29.ico" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_AlterarAnuncio.sql" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_ConsultaAnuncios.sql" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_CountAnuncios.sql" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_DeleteAnuncio.sql" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_ExisteCodAnuncio.sql" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_IncAnuncio.sql" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_ObterAnuncio.sql" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_ObterUltCodAnuncio.sql" />
+    <Content Include="DAL\Anuncio\Procedures\GI_SP_PesqAnuncio.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_AlteraCliente.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_ConsultaAllCliente.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_CountClientes.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_ExisteCodCli.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_ExisteCpfCli.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_IncCliente.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_IncLogCliente.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_ObterClientes.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_ObterLocador.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_ObterLocatario.sql" />
+    <Content Include="DAL\Clientes\Procedures\GI_SP_ObterUltCodCli.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_AlteraContratos.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_ConsulContratosBol.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_ConsultaContratos.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_CountContratos.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_ExisteCodContrato.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_IncContratos.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_IncLogContratos.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_ObterContratos.sql" />
+    <Content Include="DAL\Contratos\Procedures\GI_SP_ObterUltCodContrato.sql" />
+    <Content Include="DAL\Parametro\Procedures\GI_SP_AltParametros.sql" />
+    <Content Include="DAL\Parametro\Procedures\GI_SP_ConsultaParametros.sql" />
+    <Content Include="DAL\Parametro\Procedures\GI_SP_INCPARAMETRO.sql" />
+    <Content Include="DAL\Parametro\Procedures\GI_SP_ObterParametro.sql" />
+    <Content Include="DAL\Relatorio\Procedures\GI_SP_RelBoletos.sql" />
+    <Content Include="DAL\Relatorio\Procedures\GI_SP_RelContratos.sql" />
+    <Content Include="DAL\Relatorio\Procedures\GI_SP_RelListaAnuncio.sql" />
+    <Content Include="DAL\Relatorio\Procedures\GI_SP_RelListaClientes.sql" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

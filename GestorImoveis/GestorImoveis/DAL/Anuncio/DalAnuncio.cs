@@ -145,7 +145,7 @@ namespace GestorImoveis.DAL.Anuncio
             parametros.Add(new System.Data.SqlClient.SqlParameter("@BAIRROANUNC", pAnuncio.Bairro));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@OBSANUNC", pAnuncio.Obs));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PERMUTAANUNC", pAnuncio.Permuta));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@CHURRASQUEIRAANUNC", pAnuncio.Churrasqueira));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@CHURRASQUEIRANUNC", pAnuncio.Churrasqueira));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PISCINAANUNC", pAnuncio.Piscina));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@BRINQUEDOTECAANUNC", pAnuncio.Brinquedoteca));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PLAYGROUDANUNC", pAnuncio.Playgroud));
@@ -181,7 +181,7 @@ namespace GestorImoveis.DAL.Anuncio
             parametros.Add(new System.Data.SqlClient.SqlParameter("@BAIRROANUNC", pAnuncio.Bairro));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@OBSANUNC", pAnuncio.Obs));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PERMUTAANUNC", pAnuncio.Permuta));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@CHURRASQUEIRAANUNC", pAnuncio.Churrasqueira));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@CHURRASQUEIRANUNC", pAnuncio.Churrasqueira));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PISCINAANUNC", pAnuncio.Piscina));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@BRINQUEDOTECAANUNC", pAnuncio.Brinquedoteca));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PLAYGROUDANUNC", pAnuncio.Playgroud));
@@ -260,8 +260,8 @@ namespace GestorImoveis.DAL.Anuncio
                     if (dt.Rows[i]["PERMUTAANUNC"] != DBNull.Value)
                         anuncio.Permuta = Convert.ToBoolean(dt.Rows[i]["PERMUTAANUNC"]);
 
-                    if (dt.Rows[i]["CHURRASQUEIRAANUNC"] != DBNull.Value)
-                        anuncio.Churrasqueira = Convert.ToBoolean(dt.Rows[i]["CHURRASQUEIRAANUNC"]);
+                    if (dt.Rows[i]["CHURRASQUEIRANUNC"] != DBNull.Value)
+                        anuncio.Churrasqueira = Convert.ToBoolean(dt.Rows[i]["CHURRASQUEIRANUNC"]);
 
                     if (dt.Rows[i]["PISCINAANUNC"] != DBNull.Value)
                         anuncio.Piscina = Convert.ToBoolean(dt.Rows[i]["PISCINAANUNC"]);
