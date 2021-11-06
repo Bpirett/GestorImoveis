@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorImoveis", "GestorImov
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_GI", "Setup\Setup_GI\Setup_GI.vdproj", "{46FAE7B1-3AD4-4FF2-8D7A-571E1A45974D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GI.SqlUtil", "GI.SqlUtil\GI.SqlUtil.csproj", "{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +19,6 @@ Global
 		{DBC60C5A-671E-420E-A632-BC442D38247C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46FAE7B1-3AD4-4FF2-8D7A-571E1A45974D}.Debug|Any CPU.ActiveCfg = Debug
 		{46FAE7B1-3AD4-4FF2-8D7A-571E1A45974D}.Release|Any CPU.ActiveCfg = Release
-		{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{027031D1-2C7A-48C2-B92F-5B90C5C9A63A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

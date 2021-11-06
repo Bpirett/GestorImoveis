@@ -10,7 +10,7 @@ namespace GestorImoveis.DML
 {
     public class Cliente
     {
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string TelefoneFixo { get; set; }

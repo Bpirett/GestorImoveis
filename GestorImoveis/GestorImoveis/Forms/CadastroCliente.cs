@@ -379,7 +379,7 @@ namespace GestorImoveis.Forms
             DmlCliente.Endereco = new Endereco();
 
             if (!string.IsNullOrEmpty(txtId.Text))
-                DmlCliente.Codigo = Convert.ToInt32(txtId.Text);
+                DmlCliente.Codigo = Convert.ToString(txtId.Text);
             else
                 BoErro.DesErro(BoErro.CERRO_CAMPOOBRIGATORIO, lblCodigo.Text);
 

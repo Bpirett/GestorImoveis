@@ -126,10 +126,10 @@ namespace GestorImoveis.Forms
                 BoContrato boContrato = new BoContrato();
                 if (string.IsNullOrEmpty(txtPesqcodLocador.Text))
                 {
-                    cboLocador.DataSource = boContrato.ObterLocador(0);
+                    cboLocador.DataSource = boContrato.ObterLocador(string.Empty);
                 }
                 else
-                    cboLocador.DataSource = boContrato.ObterLocador(Convert.ToInt32(txtPesqcodLocador.Text));
+                    cboLocador.DataSource = boContrato.ObterLocador(txtPesqcodLocador.Text);
             }
             catch (Exception ex)
             {
@@ -147,10 +147,10 @@ namespace GestorImoveis.Forms
                 BoContrato boContrato = new BoContrato();
                 if (string.IsNullOrEmpty(txtPesqcodLocatario.Text))
                 {
-                    cboLocatario.DataSource = boContrato.ObterLocatario(0);
+                    cboLocatario.DataSource = boContrato.ObterLocatario(string.Empty);
                 }
                 else
-                    cboLocatario.DataSource = boContrato.ObterLocatario(Convert.ToInt32(txtPesqcodLocatario.Text));
+                    cboLocatario.DataSource = boContrato.ObterLocatario(txtPesqcodLocatario.Text);
 
             }
             catch (Exception ex)
@@ -248,7 +248,9 @@ namespace GestorImoveis.Forms
                     gridContratos.DataSource = boContrato.ObterContrato(TxtPesquisa.Text, RbNome.Text);
                 }
                 else
-                    gridContratos.DataSource = boContrato.ConsultaContratos();
+                    gridContratos.DataSource = boContrato.ObterContrato(string.Empty, string.Empty);
+
+                MontarGrid();
             }
             catch (Exception ex)
             {
@@ -457,6 +459,9 @@ namespace GestorImoveis.Forms
             }
             else
                 cboSituacao.DataSource = Enum.GetValues(typeof(Situacaocontrato));
+
+            cboLocador.DataSource =  boContrato.ObterLocador(string.Empty);
+            cboLocatario.DataSource = boContrato.ObterLocatario(string.Empty);
         }
 
         /// <summary>

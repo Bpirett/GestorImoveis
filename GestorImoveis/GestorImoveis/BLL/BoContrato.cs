@@ -1,4 +1,5 @@
-﻿using GestorImoveis.DAL.Contratos;
+﻿using GestorImoveis.DAL.Clientes;
+using GestorImoveis.DAL.Contratos;
 using GestorImoveis.DML;
 using System;
 using System.Collections.Generic;
@@ -11,21 +12,21 @@ namespace GestorImoveis.BLL
     public class BoContrato
     {
 
-        public List<string> ObterLocador(int pCod)
+        public List<string> ObterLocador(string pCod)
         {
-            DalContrato dalContrato = new DalContrato();
+            DalCliente dalCliente = new DalCliente();
 
-             var lista = dalContrato.ObterLocador(pCod);
+             var lista = dalCliente.ObterLocador(pCod);
 
             return lista;
 
         }
 
-        public List<string> ObterLocatario(int pCod)
+        public List<string> ObterLocatario(string pCod)
         {
-            DalContrato dalContrato = new DalContrato();
+            DalCliente dalCliente = new DalCliente();
 
-            var lista = dalContrato.ObterLocatario(pCod);
+            var lista = dalCliente.ObterLocatario(pCod);
 
 
             return lista;

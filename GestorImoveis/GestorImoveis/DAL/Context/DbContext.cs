@@ -18,7 +18,7 @@ namespace GestorImoveis.DAL.Context
 
         public DbContext()
         {
-            strConexao = "Server=DESKTOP-S0416TV\\SQLEXPRESS;Database=GestorImoveis;Trusted_Connection=True;";
+            strConexao = @"Server=(LocalDB)\MSSQLLocalDB;Database=GestorImoveis;Trusted_Connection=True;";
             SQLConexao = new SqlConnection(strConexao);
         }
 

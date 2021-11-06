@@ -1,0 +1,64 @@
+﻿CREATE PROCEDURE GI_SP_IncLogCliente
+
+@CLNOME varchar(14),
+@CLCPF varchar(14) ,
+@CLCODCLI  varchar(60) ,
+@CLTELEF varchar(11),
+@CLCEL varchar(12),
+@CLEMAIL varchar(60) ,
+@CLTIPO varchar(30) ,
+@CLDATACAD datetime ,
+@CLATIVO char(1) ,
+@CLCEP varchar(8) ,
+@CLEND varchar(160) ,
+@CLNUMIMOV int ,
+@CLBAIRRO varchar(60) ,
+@CLCIDADE varchar(60) ,
+@CLUF char(1) ,
+@CLCOMPL varchar(60) ,
+@CLCOMPL2 varchar(60) 
+
+AS
+BEGIN
+INSERT INTO CLOGCLIENTES
+(
+CLNOME,
+CLCPF,
+CLCODCLI,
+CLTELEF, 
+CLCEL, 
+CLEMAIL, 
+CLTIPO, 
+CLDATACAD,
+CLATIVO, 
+CLCEP,
+CLEND,
+CLNUMIMOV,
+CLBAIRRO,
+CLCIDADE,
+CLUF, 
+CLCOMPL, 
+CLCOMPL2
+)
+Values
+(
+@CLNOME,
+@CLCPF,
+@CLCODCLI,
+@CLTELEF, 
+@CLCEL, 
+@CLEMAIL, 
+@CLTIPO, 
+@CLDATACAD,
+@CLATIVO, 
+@CLCEP,
+@CLEND,
+@CLNUMIMOV,
+@CLBAIRRO,
+@CLCIDADE,
+@CLUF, 
+@CLCOMPL, 
+@CLCOMPL2
+)
+END
+GO

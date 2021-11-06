@@ -62,7 +62,7 @@ namespace GestorImoveis.BLL
 
             DataTable dt = dalRelatorio.RelListaAnuncio(pFiltro, pValor);
             pReport.DataSource = new ReportDataSource("DataSet1", dt);
-            pReport.PathReport = @"F:\Repositorio\Estudo\ControleImovel-2020\GestorImoveis\GestorImoveis\Reports\RelListaAnuncios\Template\RelListaAnuncio.rdlc";
+            pReport.PathReport = @"E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Reports\RelListaAnuncios\Template\RelListaAnuncio.rdlc";
 
             return pReport;
         }
@@ -74,7 +74,7 @@ namespace GestorImoveis.BLL
 
             DataTable dt = dalRelatorio.RelListaClientes(pFiltro, pValor);
             pReport.DataSource = new ReportDataSource("DataSetRelListaClientes", dt);
-            pReport.PathReport = @"F:\Repositorio\Estudo\ControleImovel-2020\GestorImoveis\GestorImoveis\Reports\RelListaClientes\Template\RelListaClientes.rdlc";
+            pReport.PathReport = @"E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Reports\RelListaClientes\Template\RelListaClientes.rdlc";
 
             return pReport;
         }
@@ -87,7 +87,7 @@ namespace GestorImoveis.BLL
             DataTable dt = dalRelatorio.RelContratos(pValor);
 
             pReport.DataSource = new ReportDataSource("DataSetRelContratos", dt);
-            pReport.PathReport = @"F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Reports\RelContratos\Template\RelContratos.rdlc";
+            pReport.PathReport = @"E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Reports\RelContratos\Template\RelContratos.rdlc";
 
             return pReport;
         }
@@ -100,7 +100,7 @@ namespace GestorImoveis.BLL
             DataTable dt = dalRelatorio.RelBoletos(pValor);
 
             pReport.DataSource = new ReportDataSource("DataSetRelBoletos", dt);
-            pReport.PathReport = @"F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Reports\RelBoletos\Template\RelBoletos.rdlc";
+            pReport.PathReport = @"E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Reports\RelBoletos\Template\RelBoletos.rdlc";
 
             return pReport;
         }
@@ -109,7 +109,7 @@ namespace GestorImoveis.BLL
         {
             double VlrTotal = 0.00;
 
-            if (pTipo == true)
+            if (pTipo == false)
                 VlrTotal = boleto.Valor + boleto.VlrIptu + boleto.VlrMulta - boleto.VlrDesconto;
             else
                VlrTotal = boleto.Valor + boleto.VlrIptu + boleto.VlrMulta - boleto.VlrDesconto - boleto.VlrComissao;

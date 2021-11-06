@@ -12,19 +12,19 @@ namespace GestorImoveis.DAL.Boletos
 
         #region Constantes
 
-        private const string GI_SP_CONSULTIMOCODBOLETOS = "GI_SP_ConsultUlmCodBoleto";
+        private const string GI_SP_CONSULTIMOCODBOLETOS = "GI_SP_ObterUltCodBoleto";
 
-        private const string GI_SP_VALEXISTCODBOL = "GI_SP_ValExisteCodBol";
+        private const string GI_SP_VALEXISTCODBOL = "GI_SP_ExisteCodBoleto";
 
-        private const string GI_SP_INCBOLETOS = "GI_SP_INCBOLETOS";
+        private const string GI_SP_INCBOLETOS = "GI_SP_IncBoletos";
 
-        private const string GI_SP_CONSULTOBOLETOS = "GI_SP_CONSULTOBOLETOS";
+        private const string GI_SP_CONSULTOBOLETOS = "GI_SP_ConsultaBoletos";
 
-        private const string GI_SP_OBTERBOLETO = "GI_SP_OBTERBOLETO";
+        private const string GI_SP_OBTERBOLETO = "GI_SP_ObterBoleto";
 
-        private const string GI_SP_ALTBOLETOS = "GI_SP_ALTBOLETOS";
+        private const string GI_SP_ALTBOLETOS = "GI_SP_AlterarBoletos";
 
-        private const string GI_SP_PAGARBOLETO = "GI_SP_PAGARBOLETO";
+        private const string GI_SP_PAGARBOLETO = "GI_SP_PagarBoletos";
 
         private const string GI_SP_VALIDABOLETOPAGO = "GI_SP_ValidaBoletoPago";
 
@@ -137,8 +137,8 @@ namespace GestorImoveis.DAL.Boletos
                     if (dt.Rows[i]["VLRBOL"] != DBNull.Value)
                         boleto.Valor = Convert.ToDouble(dt.Rows[i]["VLRBOL"]);
 
-                    if (dt.Rows[i]["DATAPAGBOL"] != DBNull.Value)
-                        boleto.DataPagamento = Convert.ToDateTime(dt.Rows[i]["DATAPAGBOL"]).Date;
+                    if (dt.Rows[i]["DTPAGBOL"] != DBNull.Value)
+                        boleto.DataPagamento = Convert.ToDateTime(dt.Rows[i]["DTPAGBOL"]).Date;
 
                     if (dt.Rows[i]["ENDERBOL"] != DBNull.Value)
                         boleto.Endereco = Convert.ToString(dt.Rows[i]["ENDERBOL"]);
@@ -181,9 +181,6 @@ namespace GestorImoveis.DAL.Boletos
                     if (dt.Rows[i]["CODBOL"] != DBNull.Value)
                         boleto.Codigo = Convert.ToString(dt.Rows[i]["CODBOL"]);
 
-                    if (dt.Rows[i]["CODCONTRBOL"] != DBNull.Value)
-                        boleto.Codigo = Convert.ToString(dt.Rows[i]["CODCONTRBOL"]);
-
                     if (dt.Rows[i]["NUMBOL"] != DBNull.Value)
                         boleto.NumBoleto = Convert.ToString(dt.Rows[i]["NUMBOL"]);
 
@@ -199,8 +196,8 @@ namespace GestorImoveis.DAL.Boletos
                     if (dt.Rows[i]["VLRIPTUBOL"] != DBNull.Value)
                         boleto.VlrIptu = Convert.ToDouble(dt.Rows[i]["VLRIPTUBOL"]);
 
-                    if (dt.Rows[i]["DATAPAGBOL"] != DBNull.Value)
-                        boleto.DataPagamento = Convert.ToDateTime(dt.Rows[i]["DATAPAGBOL"]);
+                    if (dt.Rows[i]["DTPAGBOL"] != DBNull.Value)
+                        boleto.DataPagamento = Convert.ToDateTime(dt.Rows[i]["DTPAGBOL"]);
 
                     if (dt.Rows[i]["DTVCTBOL"] != DBNull.Value)
                         boleto.DataVencimento = Convert.ToDateTime(dt.Rows[i]["DTVCTBOL"]).Date;
@@ -276,9 +273,6 @@ namespace GestorImoveis.DAL.Boletos
 
                     if (dt.Rows[i]["VLRIPTUBOL"] != DBNull.Value)
                         boleto.VlrIptu = Convert.ToDouble(dt.Rows[i]["VLRIPTUBOL"]);
-
-                    if (dt.Rows[i]["DATAPAGBOL"] != DBNull.Value)
-                        boleto.DataPagamento = Convert.ToDateTime(dt.Rows[i]["DATAPAGBOL"]);
 
                     if (dt.Rows[i]["DTVCTBOL"] != DBNull.Value)
                         boleto.DataVencimento = Convert.ToDateTime(dt.Rows[i]["DTVCTBOL"]).Date;
@@ -359,7 +353,7 @@ namespace GestorImoveis.DAL.Boletos
             parametros.Add(new System.Data.SqlClient.SqlParameter("@CODBOL", pCodBoleto));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@CODCONTRBOL", pCodContrato));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@NUMBOL", pNumBoleto));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@DATAPAGBOL", DateTime.Now.Date));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@DTPAGBOL", DateTime.Now.Date));
 
             db.ExecutaComandoSQL(GI_SP_PAGARBOLETO, parametros);
         }
@@ -386,10 +380,7 @@ namespace GestorImoveis.DAL.Boletos
         public double ConsultarValorReceberMes()
         {
             DbContext db = new DbContext();
-
-            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@DTNOW", DateTime.Now.Date));
-            DataSet ds = db.ConsultaSQL(GI_SP_CONSULVALORRECEBER, parametros);
+            DataSet ds = db.ConsultaSQL(GI_SP_CONSULVALORRECEBER, null);
             double ValorReceber = 0.00;
 
             if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
@@ -411,10 +402,7 @@ namespace GestorImoveis.DAL.Boletos
         public double ConsultarValorAdmReceberMes()
         {
             DbContext db = new DbContext();
-
-            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@DTNOW", DateTime.Now.Date));
-            DataSet ds = db.ConsultaSQL(GI_SP_CONSULVALORADMRECEBER, parametros);
+            DataSet ds = db.ConsultaSQL(GI_SP_CONSULVALORADMRECEBER, null);
             double ValorReceber = 0.00;
 
             if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)

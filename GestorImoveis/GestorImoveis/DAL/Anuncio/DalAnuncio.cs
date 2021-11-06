@@ -15,21 +15,19 @@ namespace GestorImoveis.DAL.Anuncio
 
         #region Constantes
 
-        private const string GI_SP_CONSULTAANUNCIO = "GI_SP_CONSULTAANUNCIO";
-
-        private const string GI_SP_CONSULTIMOCODANUNCIO = "GI_SP_CONSULTIMOCODANUNCIO";
+        private const string GI_SP_CONSULTIMOCODANUNCIO = "GI_SP_ObterUltCodAnuncio";
 
         private const string GI_SP_INCANUNCIO = "GI_SP_IncAnuncio";
 
-        private const string GI_SP_VALEXISTCODANUNCIO = "GI_SP_VALEXISTCODANUNCIO";
+        private const string GI_SP_VALEXISTCODANUNCIO = "GI_SP_ExisteCodAnuncio";
 
         private const string GI_SP_OBTERANUNCIO = "GI_SP_ObterAnuncio";
 
-        private const string GI_SP_ATUALIZAANUNCIO = "GI_SP_AtualizaAnuncio";
+        private const string GI_SP_ATUALIZAANUNCIO = "GI_SP_AlterarAnuncio";
 
         private const string GI_SP_CONSULTAANUNCIOS = "GI_SP_ConsultaAnuncios";
 
-        private const string GI_SP_DELETEANUNCIO = "GI_SP_DeleteAnuncio";
+        private const string GI_SP_DELETEANUNCIO = "/*GI_SP_DeleteAnuncio*/";
 
         private const string GI_SP_PESQANUNCIO = "GI_SP_PesqAnuncio";
 
@@ -147,9 +145,9 @@ namespace GestorImoveis.DAL.Anuncio
             parametros.Add(new System.Data.SqlClient.SqlParameter("@BAIRROANUNC", pAnuncio.Bairro));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@OBSANUNC", pAnuncio.Obs));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PERMUTAANUNC", pAnuncio.Permuta));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@CHURRASQUEIRANUN", pAnuncio.Churrasqueira));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@CHURRASQUEIRAANUNC", pAnuncio.Churrasqueira));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PISCINAANUNC", pAnuncio.Piscina));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@BRINQUEDOTECAANU", pAnuncio.Brinquedoteca));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@BRINQUEDOTECAANUNC", pAnuncio.Brinquedoteca));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PLAYGROUDANUNC", pAnuncio.Playgroud));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@QUADRAANUNC", pAnuncio.Poliesportiva));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@SGINASTICAANUNC", pAnuncio.Ginastica));
@@ -183,9 +181,9 @@ namespace GestorImoveis.DAL.Anuncio
             parametros.Add(new System.Data.SqlClient.SqlParameter("@BAIRROANUNC", pAnuncio.Bairro));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@OBSANUNC", pAnuncio.Obs));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PERMUTAANUNC", pAnuncio.Permuta));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@CHURRASQUEIRANUN", pAnuncio.Churrasqueira));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@CHURRASQUEIRAANUNC", pAnuncio.Churrasqueira));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PISCINAANUNC", pAnuncio.Piscina));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@BRINQUEDOTECAANU", pAnuncio.Brinquedoteca));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@BRINQUEDOTECAANUNC", pAnuncio.Brinquedoteca));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@PLAYGROUDANUNC", pAnuncio.Playgroud));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@QUADRAANUNC", pAnuncio.Poliesportiva));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@SGINASTICAANUNC", pAnuncio.Ginastica));
@@ -262,8 +260,8 @@ namespace GestorImoveis.DAL.Anuncio
                     if (dt.Rows[i]["PERMUTAANUNC"] != DBNull.Value)
                         anuncio.Permuta = Convert.ToBoolean(dt.Rows[i]["PERMUTAANUNC"]);
 
-                    if (dt.Rows[i]["CHURRASQUEIRANUNC"] != DBNull.Value)
-                        anuncio.Churrasqueira = Convert.ToBoolean(dt.Rows[i]["CHURRASQUEIRANUNC"]);
+                    if (dt.Rows[i]["CHURRASQUEIRAANUNC"] != DBNull.Value)
+                        anuncio.Churrasqueira = Convert.ToBoolean(dt.Rows[i]["CHURRASQUEIRAANUNC"]);
 
                     if (dt.Rows[i]["PISCINAANUNC"] != DBNull.Value)
                         anuncio.Piscina = Convert.ToBoolean(dt.Rows[i]["PISCINAANUNC"]);

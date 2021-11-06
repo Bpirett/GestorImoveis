@@ -77,10 +77,14 @@ namespace GestorImoveis.Forms
 
         private void RbNomeProp_CheckedChanged(object sender, EventArgs e)
         {
+            TxtPesquisa.Visible = true;
+            cboRegiaoPesq.Visible = false;
             LimparCampos();
         }
         private void RbCodigo_CheckedChanged(object sender, EventArgs e)
         {
+            TxtPesquisa.Visible = true;
+            cboRegiaoPesq.Visible = false;
             LimparCampos();
         }
         private void BtnPesquisa_Click(object sender, EventArgs e)

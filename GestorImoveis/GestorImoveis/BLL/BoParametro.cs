@@ -15,7 +15,7 @@ namespace GestorImoveis.BLL
     {
         #region Parametros
 
-        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Boletos, Parametros = "R_DIRMOBOL", Descricao = "Define Diretorio onde se encontra o documento modelo de boletos", ConteudoDefault = @"C:\Users\bpirett\Pictures\Doc")]
+        [AtributoParametro(Sistema = "GI", Categoria = Parametro.ParametroCategoria.Boletos, Parametros = "R_DIRMOBOL", Descricao = "Define Diretorio onde se encontra o documento modelo de boletos", ConteudoDefault = @"E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\Template.docx")]
         public static string R_DIRMOBOL
         {
             get

@@ -14,29 +14,27 @@ namespace GestorImoveis.DAL.Clientes
     {
         #region Constantes
 
-        private const string GI_SP_INCCLIENTE = "GI_SP_INCCLIENTE";
+        private const string GI_SP_INCCLIENTE = "GI_SP_IncCliente";
 
-        private const string GI_SP_CONSULTIMOCODCLI = "GI_SP_CONSULTIMOCODCLI";
+        private const string GI_SP_CONSULTIMOCODCLI = "GI_SP_ObterUltCodCli";
 
-        private const string GI_SP_VALEXISTCODCLI = "GI_SP_VALEXISTCODCLI";
+        private const string GI_SP_VALEXISTCODCLI = "GI_SP_ExisteCodCli";
 
-        private const string GI_SP_CONSULTACLIENTEs = "GI_SP_CONSULTACLIENTEs";
+        private const string GI_SP_CONSULTACLIENTES = "GI_SP_ConsultaAllCliente";
 
-        private const string GI_SP_ATULIZACLIENTE = "GI_SP_ATULIZACLIENTE";
+        private const string GI_SP_ATULIZACLIENTE = "GI_SP_AlteraCliente";
 
-        private const string GI_SP_VALEXISTENCIACPF = "GI_SP_VALEXISTENCIACPF";
+        private const string GI_SP_VALEXISTENCIACPF = "GI_SP_ExisteCpfCli";
 
-        private const string GI_SP_OBTERCLIENTE = "GI_SP_OBTERCLIENTE";
+        private const string GI_SP_OBTERCLIENTE = "GI_SP_ObterClientes";
 
-        private const string GI_SP_INCLOGCLI = "GI_SP_IncCLogCliente";
+        private const string GI_SP_INCLOGCLI = "GI_SP_IncLogCliente";
 
         private const string GI_SP_COUNTCLIENTES = "GI_SP_CountClientes";
 
-        private const string GI_SP_COUNTLOCADORES = "GI_SP_CountLocadores";
+        private const string GI_SP_OBTERLOCADOR = "GI_SP_ObterLocador";
 
-        private const string GI_SP_COUNTLOCATARIOS = "GI_SP_CountLocatarios";
-
-
+        private const string GI_SP_OBTERLOCATARIO = "GI_SP_ObterLocatario";
 
         #endregion
         public string ObterUltCodCli()
@@ -172,7 +170,7 @@ namespace GestorImoveis.DAL.Clientes
                     cliente.Endereco = new Endereco();
 
                     if (dt.Rows[i]["CODCLI"] != DBNull.Value)
-                        cliente.Codigo = Convert.ToInt32(dt.Rows[i]["CODCLI"]);
+                        cliente.Codigo = Convert.ToString(dt.Rows[i]["CODCLI"]);
 
                     if (dt.Rows[i]["NOMECLI"] != DBNull.Value)
                         cliente.Nome = Convert.ToString(dt.Rows[i]["NOMECLI"]);
@@ -242,7 +240,7 @@ namespace GestorImoveis.DAL.Clientes
             List<Cliente> lstcliente = new List<Cliente>();
 
             DbContext db = new DbContext();
-            DataSet ds = db.ConsultaSQL(GI_SP_CONSULTACLIENTEs, null);
+            DataSet ds = db.ConsultaSQL(GI_SP_CONSULTACLIENTES, null);
 
             if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
@@ -254,7 +252,7 @@ namespace GestorImoveis.DAL.Clientes
                     Cliente cliente = new Cliente();
                     cliente.Endereco = new Endereco();
                     if (dt.Rows[i]["CODCLI"] != DBNull.Value)
-                        cliente.Codigo = Convert.ToInt32(dt.Rows[i]["CODCLI"]);
+                        cliente.Codigo = Convert.ToString(dt.Rows[i]["CODCLI"]);
 
                     if (dt.Rows[i]["NOMECLI"] != DBNull.Value)
                         cliente.Nome = Convert.ToString(dt.Rows[i]["NOMECLI"]);
@@ -323,23 +321,23 @@ namespace GestorImoveis.DAL.Clientes
             DbContext db = new DbContext();
 
 
-            parametros.Add(new System.Data.SqlClient.SqlParameter("NomeCli", pCliente.Nome));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("CPFCli", pCliente.CPF));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("CodCli", pCliente.Codigo));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("TelefCli", pCliente.TelefoneFixo));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("CelCli", pCliente.Celular));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("EmailCli", pCliente.Email));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("TipoCli", pCliente.tipoCliente));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("DATACADCLI", DateTime.Now));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("AtivoCli", UtilHelpers.ConverterTipoSituacao(pCliente.ClienteAtivo)));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("CEPCLI", pCliente.Endereco.Cep));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("ENDCLI", pCliente.Endereco.End));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("NUMIMOVCLI", pCliente.Endereco.NumeroImovel));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("BAIRROCLI", pCliente.Endereco.Bairro));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("CIDADECLI", pCliente.Endereco.Cidade));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("UFCLI", pCliente.Endereco.Uf));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("COMPLCLI", pCliente.Endereco.Complemento));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("COMPL2CLI", pCliente.Endereco.Complemento2));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLNOME", pCliente.Nome));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLCPF", pCliente.CPF));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLCODCLI", pCliente.Codigo));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLTELEF", pCliente.TelefoneFixo));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLCEL", pCliente.Celular));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLEMAIL", pCliente.Email));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLTIPO", pCliente.tipoCliente));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLDATACAD", DateTime.Now));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLATIVO", UtilHelpers.ConverterTipoSituacao(pCliente.ClienteAtivo)));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLCEP", pCliente.Endereco.Cep));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLEND", pCliente.Endereco.End));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLNUMIMOV", pCliente.Endereco.NumeroImovel));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLBAIRRO", pCliente.Endereco.Bairro));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLCIDADE", pCliente.Endereco.Cidade));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLUF", pCliente.Endereco.Uf));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLCOMPL", pCliente.Endereco.Complemento));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CLCOMPL2", pCliente.Endereco.Complemento2));
 
 
             db.ExecutaComandoSQL(GI_SP_INCLOGCLI, parametros);
@@ -355,19 +353,90 @@ namespace GestorImoveis.DAL.Clientes
 
         public int CountLocatarios()
         {
+            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@TIPOCLIENTE", "Locatario"));
+
             DbContext db = new DbContext();
-            DataSet ds = db.ConsultaSQL(GI_SP_COUNTLOCATARIOS, null);
+            DataSet ds = db.ConsultaSQL(GI_SP_COUNTCLIENTES, parametros);
             DataTable dt = ds.Tables[0];
             return Convert.ToInt32(dt.Rows[0]["QUANTIDADE"].ToString());
         }
 
         public int CountLocadores()
         {
+            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@TIPOCLIENTE", "Locador"));
+
             DbContext db = new DbContext();
-            DataSet ds = db.ConsultaSQL(GI_SP_COUNTLOCADORES, null);
+            DataSet ds = db.ConsultaSQL(GI_SP_COUNTCLIENTES, parametros);
             DataTable dt = ds.Tables[0];
             return Convert.ToInt32(dt.Rows[0]["QUANTIDADE"].ToString());
         }
+
+        public List<string> ObterLocador(string pCodLocador)
+        {
+            List<string> lstcontrato = new List<string>();
+
+            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
+
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CODCLI", pCodLocador));
+
+
+            DbContext db = new DbContext();
+            DataSet ds = db.ConsultaSQL(GI_SP_OBTERLOCADOR, parametros);
+
+            if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+
+                DataTable dt = ds.Tables[0];
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    Contrato contrato = new Contrato();
+                    if (dt.Rows[i]["NOMECLI"] != DBNull.Value)
+                        contrato.Locador = Convert.ToString(dt.Rows[i]["NOMECLI"]);
+
+                    lstcontrato.Add(contrato.Locador);
+                }
+
+            }
+
+            return lstcontrato;
+        }
+
+        public List<string> ObterLocatario(string pCodLocatario)
+        {
+            List<string> lstcontrato = new List<string>();
+
+            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
+
+            parametros.Add(new System.Data.SqlClient.SqlParameter("CODCLI", pCodLocatario));
+
+
+            DbContext db = new DbContext();
+            DataSet ds = db.ConsultaSQL(GI_SP_OBTERLOCATARIO, parametros);
+
+            if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+
+                DataTable dt = ds.Tables[0];
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    Contrato contrato = new Contrato();
+                    if (dt.Rows[i]["NOMECLI"] != DBNull.Value)
+                        contrato.Locador = Convert.ToString(dt.Rows[i]["NOMECLI"]);
+
+                    lstcontrato.Add(contrato.Locador);
+                }
+
+            }
+
+            return lstcontrato;
+        }
+
+
+
 
     }
 }

@@ -14,25 +14,21 @@ namespace GestorImoveis.DAL.Contratos
     {
         #region Constantes
 
-        private const string GI_SP_OBTERLOCADOR = "GI_SP_OBTERLOCADOR";
+        private const string GI_SP_CONSULTACONTRATOS = "GI_SP_ConsultaContratos";
 
-        private const string GI_SP_OBTERLOCATARIO = "GI_SP_OBTERLOCATARIO";
+        private const string GI_SP_CONSULTIMOCODCONTRATOS = "GI_SP_ObterUltCodContrato";
 
-        private const string GI_SP_CONSULTACONTRATOS = "GI_SP_CONSULTACONTRATOS";
+        private const string GI_SP_INCCONTRATOS = "GI_SP_IncContratos";
 
-        private const string GI_SP_CONSULTIMOCODCONTRATOS = "GI_SP_CONSULTIMOCODCONTRATOS";
+        private const string GI_SP_VALEXISTCODCONTR = "GI_SP_ExisteCodContrato";
 
-        private const string GI_SP_INCCONTRATOS = "GI_SP_INCCONTRATOS";
+        private const string GI_SP_OBTERCONTRATO = "GI_SP_ObterContratos";
 
-        private const string GI_SP_VALEXISTCODCONTR = "GI_SP_VALEXISTCODCONTR";
+        private const string GI_SP_ATUALIZARCONTRATOS = "GI_SP_AlteraContratos";
 
-        private const string GI_SP_OBTERCONTRATO = "GI_SP_OBTERCONTRATO";
+        private const string GI_SP_CONSCONTRATOSBOL = "GI_SP_ConsulContratosBol";
 
-        private const string GI_SP_ATUALIZARCONTRATOS = "GI_SP_AtualizaContrato";
-
-        private const string GI_SP_CONSCONTRATOSBOL = "GI_SP_CONSCONTRATOSBOL";
-
-        private const string GI_SP_INCLOGCONTRATOS = "GI_SP_IncCLogProp";
+        private const string GI_SP_INCLOGCONTRATOS = "GI_SP_IncLogContratos";
 
         private const string GI_SP_COUNTCONTRATOS = "GI_SP_CountContratos";
 
@@ -90,7 +86,7 @@ namespace GestorImoveis.DAL.Contratos
             parametros.Add(new System.Data.SqlClient.SqlParameter("@DIAPAGCONTR", pContratos.DiaPagamento));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@VALORCONTR", pContratos.Valor));
             parametros.Add(new System.Data.SqlClient.SqlParameter("@VLRIPTUCONTR", pContratos.VlrIptu));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@CADCONTR", DateTime.Now));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@DTCADCONTR", DateTime.Now));
             parametros.Add(new System.Data.SqlClient.SqlParameter("NUMIMOVCONTR", pContratos.End.NumeroImovel));
             parametros.Add(new System.Data.SqlClient.SqlParameter("BAIRROCONTR", pContratos.End.Bairro));
             parametros.Add(new System.Data.SqlClient.SqlParameter("CIDADECONTR", pContratos.End.Cidade));
@@ -134,67 +130,7 @@ namespace GestorImoveis.DAL.Contratos
             db.ExecutaComandoSQL(GI_SP_ATUALIZARCONTRATOS, parametros);
         }
 
-        public List<string> ObterLocador(int pCodLocador)
-        {
-            List<string> lstcontrato = new List<string>();
 
-            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
-
-            parametros.Add(new System.Data.SqlClient.SqlParameter("CODCLI", pCodLocador));
-
-
-            DbContext db = new DbContext();
-            DataSet ds = db.ConsultaSQL(GI_SP_OBTERLOCADOR, parametros);
-
-            if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-            {
-
-                DataTable dt = ds.Tables[0];
-
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    Contrato contrato = new Contrato();
-                    if (dt.Rows[i]["NOMECLI"] != DBNull.Value)
-                        contrato.Locador = Convert.ToString(dt.Rows[i]["NOMECLI"]);
-
-                    lstcontrato.Add(contrato.Locador);
-                }
-
-            }
-
-            return lstcontrato;
-        }
-
-        public List<string> ObterLocatario(int pCodLocatario)
-        {
-            List<string> lstcontrato = new List<string>();
-
-            List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
-
-            parametros.Add(new System.Data.SqlClient.SqlParameter("CODCLI", pCodLocatario));
-
-
-            DbContext db = new DbContext();
-            DataSet ds = db.ConsultaSQL(GI_SP_OBTERLOCATARIO, parametros);
-
-            if (ds != null && ds.Tables != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-            {
-
-                DataTable dt = ds.Tables[0];
-
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    Contrato contrato = new Contrato();
-                    if (dt.Rows[i]["NOMECLI"] != DBNull.Value)
-                        contrato.Locador = Convert.ToString(dt.Rows[i]["NOMECLI"]);
-
-                    lstcontrato.Add(contrato.Locador);
-                }
-
-            }
-
-            return lstcontrato;
-        }
 
         public List<Contrato> ConsultaContratos()
         {
@@ -368,26 +304,26 @@ namespace GestorImoveis.DAL.Contratos
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
 
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@CODCONTR", pContratos.Codigo));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@CEPCONTR", pContratos.End.Cep));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@ENDCONTR", pContratos.End.End));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@SITCONTR", pContratos.ConverterSitcontrato(pContratos.SituacaoContrato)));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@TIPOIMOVCONTR", pContratos.TipoImovel));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@NOMELOCASCONTR", pContratos.Locador));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@NOMELOCATCONTR", pContratos.Locatario));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@DTENTRADACONTR", pContratos.DataEntrada));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@QTAMESESCONTR", pContratos.QtaMeses));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@DTSAIDACONTR", pContratos.DataSaida));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@DIAPAGCONTR", pContratos.DiaPagamento));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@VALORCONTR", pContratos.Valor));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@VLRIPTUCONTR", pContratos.VlrIptu));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("@CADCONTR", DateTime.Now));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("NUMIMOVCONTR", pContratos.End.NumeroImovel));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("BAIRROCONTR", pContratos.End.Bairro));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("CIDADECONTR", pContratos.End.Cidade));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("UFCONTR", pContratos.End.Uf));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("COMPLCONTR", pContratos.End.Complemento ?? string.Empty));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("COMPL2CONTR", pContratos.End.Complemento2 ?? string.Empty));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCCODCONTR", pContratos.Codigo));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCCEP", pContratos.End.Cep));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCEND", pContratos.End.End));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCSIT", pContratos.ConverterSitcontrato(pContratos.SituacaoContrato)));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCTPIMOV", pContratos.TipoImovel));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCNOMELOCAD", pContratos.Locador));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCNOMELOCAT", pContratos.Locatario));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCDTENTRADA", pContratos.DataEntrada));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCQTAMESES", pContratos.QtaMeses));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCDTSAIDA", pContratos.DataSaida));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCDIAPAG", pContratos.DiaPagamento));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCVALOR", pContratos.Valor));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCVLRIPTU", pContratos.VlrIptu));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("@LCDTCAD", DateTime.Now));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("LCNUMIMOV", pContratos.End.NumeroImovel));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("LCBAIRRO", pContratos.End.Bairro));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("LCCIDADE", pContratos.End.Cidade));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("LCUF", pContratos.End.Uf));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("LCCOMPL", pContratos.End.Complemento ?? string.Empty));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("LCCOMPL2", pContratos.End.Complemento2 ?? string.Empty));
 
             DbContext db = new DbContext();
             db.ExecutaComandoSQL(GI_SP_INCLOGCONTRATOS, parametros);
