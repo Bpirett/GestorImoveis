@@ -231,7 +231,6 @@ F:\Repositorio\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\Inte
 E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
 E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
 E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
-E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.csproj.AssemblyReference.cache
 E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\Interop.Office.dll
 E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.csproj.ResolveComReference.cache
 E:\Projetos\GestorImoveis\GestorImoveis\GestorImoveis\obj\Debug\GestorImoveis.Forms.AlertForm.resources
